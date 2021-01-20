@@ -15,10 +15,11 @@
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>HouseMuch</title>
-    <link rel="apple-touch-icon" href="${pageContext.request.contextPath}/resources/app-assets/images/ico/apple-icon-120.png">
+    <link rel="apple-touch-icon" href="${pageContext.request.contextPath}//resources/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/app-assets/vendors/css/charts/apexcharts.css">
@@ -109,9 +110,8 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/css/style.css">
     <!-- END: Custom CSS-->
 
-	<!-- fonts 추가 -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+	<!-- 비교 -->
+
 
 
 
@@ -135,19 +135,11 @@
                     <li class="nav-item d-none d-lg-block"><a class="nav-link" href="<c:url value='/sample/chat.do'/>" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon" data-feather="message-square"></i></a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link" href="<c:url value='/sample/calendar.do'/>" data-toggle="tooltip" data-placement="top" title="Calendar"><i class="ficon" data-feather="calendar"></i></a></li>
                 </ul>
-                <ul class="nav navbar-nav">
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon text-warning" data-feather="star"></i></a>
-                        <div class="bookmark-input search-input">
-                            <div class="bookmark-input-icon"><i data-feather="search"></i></div>
-                            <input class="form-control input" type="text" placeholder="Bookmark" tabindex="0" data-search="search">
-                            <ul class="search-list search-list-bookmark"></ul>
-                        </div>
-                    </li>
-                </ul>
+             
             </div>
             <ul class="nav navbar-nav align-items-center ml-auto">
                 
-                <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="moon"></i></a></li>
+           
                 <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
                     <div class="search-input">
                         <div class="search-input-icon"><i data-feather="search"></i></div>
@@ -249,84 +241,7 @@
             </ul>
         </div>
     </nav>
-    <ul class="main-search-list-defaultlist d-none">
-        <li class="d-flex align-items-center"><a href="javascript:void(0);">
-                <h6 class="section-label mt-75 mb-0">Files</h6>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="#">
-                <div class="d-flex">
-                    <div class="mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/icons/xls.png" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
-                    </div>
-                </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="#">
-                <div class="d-flex">
-                    <div class="mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/icons/jpg.png" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
-                    </div>
-                </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="#">
-                <div class="d-flex">
-                    <div class="mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/icons/pdf.png" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
-                    </div>
-                </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="#">
-                <div class="d-flex">
-                    <div class="mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/icons/doc.png" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
-                    </div>
-                </div><small class="search-data-size mr-50 text-muted">&apos;256kb</small>
-            </a></li>
-        <li class="d-flex align-items-center"><a href="javascript:void(0);">
-                <h6 class="section-label mt-75 mb-0">Members</h6>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-                <div class="d-flex align-items-center">
-                    <div class="avatar mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
-                    </div>
-                </div>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-                <div class="d-flex align-items-center">
-                    <div class="avatar mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
-                    </div>
-                </div>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-                <div class="d-flex align-items-center">
-                    <div class="avatar mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
-                    </div>
-                </div>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
-                <div class="d-flex align-items-center">
-                    <div class="avatar mr-75"><img src="${pageContext.request.contextPath}/resources/app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
-                    <div class="search-data">
-                        <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
-                    </div>
-                </div>
-            </a></li>
-    </ul>
-    <ul class="main-search-list-defaultlist-other-list d-none">
-        <li class="auto-suggestion justify-content-between"><a class="d-flex align-items-center justify-content-between w-100 py-50">
-                <div class="d-flex justify-content-start"><span class="mr-75" data-feather="alert-circle"></span><span>No results found.</span></div>
-            </a></li>
-    </ul>
-    <!-- END: Header-->
+     <!-- END: Header-->
 
 
     <!-- BEGIN: Main Menu-->
@@ -335,35 +250,12 @@
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand" href="${pageContext.request.contextPath}/mydash/index.do">
                 <span class="brand-logo">
-                          <!-- <svg viewbox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24">
-                                <defs>
-                                    <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
-                                        <stop stop-color="#000000" offset="0%"></stop>
-                                        <stop stop-color="#FFFFFF" offset="100%"></stop>
-                                    </lineargradient>
-                                    <lineargradient id="linearGradient-2" x1="64.0437835%" y1="46.3276743%" x2="37.373316%" y2="100%">
-                                        <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
-                                        <stop stop-color="#FFFFFF" offset="100%"></stop>
-                                    </lineargradient>
-                                </defs>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Artboard" transform="translate(-400.000000, -178.000000)">
-                                        <g id="Group" transform="translate(400.000000, 178.000000)">
-                                            <path class="text-primary" id="Path" d="M-5.68434189e-14,2.84217094e-14 L39.1816085,2.84217094e-14 L69.3453773,32.2519224 L101.428699,2.84217094e-14 L138.784583,2.84217094e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L6.71554594,44.4188507 C2.46876683,39.9813776 0.345377275,35.1089553 0.345377275,29.8015838 C0.345377275,24.4942122 0.230251516,14.560351 -5.68434189e-14,2.84217094e-14 Z" style="fill:currentColor"></path>
-                                            <path id="Path1" d="M69.3453773,32.2519224 L101.428699,1.42108547e-14 L138.784583,1.42108547e-14 L138.784199,29.8015838 C137.958931,37.3510206 135.784352,42.5567762 132.260463,45.4188507 C128.736573,48.2809251 112.33867,64.5239941 83.0667527,94.1480575 L56.2750821,94.1480575 L32.8435758,70.5039241 L69.3453773,32.2519224 Z" fill="url(#linearGradient-1)" opacity="0.2"></path>
-                                            <polygon id="Path-2" fill="#000000" opacity="0.049999997" points="69.3922914 32.4202615 32.8435758 70.5039241 54.0490008 16.1851325"></polygon>
-                                            <polygon id="Path-21" fill="#000000" opacity="0.099999994" points="69.3922914 32.4202615 32.8435758 70.5039241 58.3683556 20.7402338"></polygon>
-                                            <polygon id="Path-3" fill="url(#linearGradient-2)" opacity="0.099999994" points="101.428699 0 83.0667527 94.1480575 130.378721 47.0740288"></polygon>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                            -->
+     
                             
                             </span>
-                        <h2 class="brand-text">
+                        <div class="brand-text">
 <img alt="하우스머치관리자로고" src='<c:url value="/resources/aptAdmin_images/housemuch_adminLogo.png" />'>
-</h2>
+</div>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
             </ul>
@@ -371,65 +263,131 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item">
-                
-                <a class="d-flex align-items-center" href="<c:url value='/mydash/index.do'/>">  <!-- 입주민 홈으로 가는 링크 : 어떤페이지로 할 지 결정하기 -->
-                <i data-feather="home"></i>
-                <span class="menu-title text-truncate" data-i18n="Dashboards">입주민 홈</span>
-                <span class="badge badge-light-warning badge-pill ml-auto mr-1">765</span>
-                </a>
-                
-                    <ul class="menu-content">
-                    
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/Analytics.do'/>  "><i data-feather="circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
-                        </li>
-                        
-                        <li class="d-flex align-items-center"><a class="d-flex align-items-center" href="<c:url value='/sample/eCommerce.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="eCommerce">eCommerce</span></a>
-                        </li>
-                        
-                    </ul>
+
+                <!-- 입주민 홈으로 가는 링크 : 어떤페이지로 할 지 결정하기 -->
+                <li class="nav-item">
+	                <a class="align-items-center" href="<c:url value='/mydash/index.do'/>"><span class="menu-title">입주민 홈으로 이동</span></a>
                 </li>
-                
+                 <hr>
                 <!-- navi 시작 -->
-                
-                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">관리자 메뉴</span><i data-feather="more-horizontal"></i>
+                <!----------------------------------------------- 여기부터 단독메뉴  ------------------------------------------------------------->
+                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">행정 관리 업무</span><i data-feather="more-horizontal"></i>
                 </li>
-              
-                <li class=" nav-item"><a class="d-flex align-items-center" href="<c:url value='/sample/email.do'/>"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Email</span></a>
-                </li>
-               
-                <li class=" nav-item"><a class="d-flex align-items-center" href="<c:url value='/sample/chat.do'/>"><i data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Chat</span></a>
-                </li>
-               
-                <li class=" nav-item"><a class="d-flex align-items-center" href="<c:url value='/sample/calendar.do'/>"><i data-feather="calendar"></i><span class="menu-title text-truncate" data-i18n="Calendar">Calendar</span></a>
-                </li>
-               
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Invoice">Invoice</span></a>
+           
+       
+                <!-- 행정1 : 일정 및 공지 관리 -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><span class="menu-title text-truncate" data-i18n="eCommerce">일정 및 공지 관리</span></a>
                     <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-invoice-list.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="List">List</span></a>
+                        
+                        <!-- 행정1-3 : 일정 및 공지 목록 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminNoti/adminNotiList.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Wish List">일정/공지 목록</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-invoice-preview.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Preview">Preview</span></a>
+                        
+                        <!-- 행정1-1 : 일정 및 공지 등록 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminNoti/adminNotiRegister.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">일정/공지 등록</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-invoice-edit.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Edit">Edit</span></a>
+                        
+                        <!-- 행정1-2 : 일정 및 공지 수정 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminNoti/adminNotiEdit.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Details">일정/공지 수정</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-invoice-add.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Add">Add</span></a>
+                        
+                        <!-- 행정1-3 : 일정 및 공지 삭제 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminNoti/adminNotiDel.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Wish List">일정/공지 삭제</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- 행정2 : 부가시설 관리 -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><span class="menu-title text-truncate" data-i18n="eCommerce">부가시설 관리</span></a>
+                    <ul class="menu-content">
+                        <!-- 행정2-1 : 부가시설 등록 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminAdd/adminAddRegList.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">부가시설 등록</span></a>
+                        </li>
+                        
+                        <!-- 행정2-2 : 부가시설 수정 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminAdd/adminAddEdit.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Details">부가시설 수정</span></a>
+                        </li>
+                        
+                        <!-- 행정2-3 : 부가시설 신청내역 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminAdd/adminAddResidence.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Wish List">부가시설 신청내역</span></a>
                         </li>
                     </ul>
                 </li>
                 
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shopping-cart"></i><span class="menu-title text-truncate" data-i18n="eCommerce">eCommerce</span></a>
+                
+
+                <!-- 행정3 : 차량 관리 -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><span class="menu-title text-truncate" data-i18n="eCommerce">차량 관리</span></a>
                     <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-ecommerce-shop.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">Shop</span></a>
+                        <!-- 행정3-1 : 방문차량 등록현황 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminCar/adminCarVisit.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">방문 차량 관리</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-ecommerce-details.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Details">Details</span></a>
+                        
+                        <!-- 행정3-2 : 차량 등록 상세 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminCar/adminCarDetail.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Details">등록 차량 상세조회</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-ecommerce-wishlist.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Wish List">Wish List</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="<c:url value='/sample/app-ecommerce-checkout.do'/>"><i data-feather="circle"></i><span class="menu-item" data-i18n="Checkout">Checkout</span></a>
+                        
+                        <!-- 행정2-3 : 부가시설 신청내역 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminCar/adminCarResidence.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Wish List">세대 차량 관리</span></a>
                         </li>
                     </ul>
                 </li>
+                <hr>
+                <!----------------------------------------------- 여기까지 단독메뉴  ------------------------------------------------------------->
                 
+                
+                <!----------------------------------------------- 여기부터 공통메뉴  ------------------------------------------------------------->
+                <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">일반 관리 업무</span><i data-feather="more-horizontal"></i>
+                </li>
+           
+       
+                <!-- 일반1 : 입주민 투표 현황-->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><span class="menu-title text-truncate" data-i18n="eCommerce">입주민 투표 현황</span></a>
+                    <ul class="menu-content">
+                        <!-- 행정1-1 : 입주민 투표 현황 -->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminNoti/adminNotiRegList.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">입주민 투표 현황</span></a>
+                        </li>
+                       
+                    </ul>
+                </li>
+
+                <!-- 일반2 : 입주민 게시판 관리 -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><span class="menu-title text-truncate" data-i18n="eCommerce">입주민 게시판 관리</span></a>
+                    <ul class="menu-content">
+                        <!-- 일반2-1 : 입주민 게시판 카테고리 편집-->
+                        <li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminAdd/adminAddRegList.do'/>">
+                        <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">게시판 카테고리 편집</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- 일반3 : 건의 답변-->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><span class="menu-title text-truncate" data-i18n="eCommerce">건의 사항 관리</span></a>
+                    <ul class="menu-content">
+                
+	      		        <!-- 일반3-1 : 건의 목록-->
+	                	<li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminCar/adminCarVisit.do'/>">
+	                       <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">건의 게시판</span></a>
+	                    </li>
+	      		        <!-- 일반3-2 : 건의 답변-->
+	                	<li><a class="d-flex align-items-center" href="<c:url value='/admin/adminLiving/adminCar/adminCarVisit.do'/>">
+	                       <i data-feather="circle"></i><span class="menu-item" data-i18n="Shop">건의 답변</span></a>
+	                    </li>
+                    </ul>
+                </li>
+                <hr/>
+                <!----------------------------------------------- 여기까지 단독메뉴  ------------------------------------------------------------->
                 
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="User">User</span></a>
                     <ul class="menu-content">
@@ -707,7 +665,7 @@
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.ticksy.com/"><i data-feather="life-buoy"></i><span class="menu-title text-truncate" data-i18n="Raise Support">Raise Support</span></a>
                 </li>
-            </ul>
+            </ul><!-- 사이드 대메뉴ul -->
         </div>
     </div>
     <!-- END: Main Menu-->
