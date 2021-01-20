@@ -38,7 +38,7 @@
 			<div align="center" style="margin-bottom:50px;"><img src="<c:url value='/resources/common_img/findId.png'/>" alt="findId"></div>
 			
 			<div style="width:1000px; float: left; margin-left: 200px; margin-bottom: 50px; ">
-				<h4>아이디가 기억이 나지 않으신가요?</h4>
+				<h4>아이디가 기억이 나지 않으시나요?</h4>
 				<p>본인확인 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</p>
 			</div>
 	         
