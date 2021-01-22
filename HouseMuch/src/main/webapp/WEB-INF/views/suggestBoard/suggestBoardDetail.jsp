@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../mainInc/mainTop.jsp"%>
 
+<link href="${pageContext.request.contextPath}/resources/userBoard/css/boardStyle.css" rel="stylesheet">
+
 <section id="userBoard" class="userBoard">
 	<div class="container">
 		<br> <br> <br> <br>
@@ -9,7 +11,7 @@
 			<h2>건의게시판 상세보기</h2>
 		</div>
 		<div class="center">
-			<div class="text-center">
+			<div class="text-right">
 				<button type="submit" id="btEdit">수정</button>
 				<button type="submit" id="btDelete">삭제</button>
 				<button type="submit" id="btList">목록</button>

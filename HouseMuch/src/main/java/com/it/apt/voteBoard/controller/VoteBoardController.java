@@ -15,11 +15,11 @@ public class VoteBoardController {
 
 	@RequestMapping("/voteBoardDetail.do")
 	public void boardDetail() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û »ó¼¼º¸±â - voteBoardDetail");
+		logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ ìƒì„¸ë³´ê¸° - voteBoardDetail");
 	}
 	
 	@RequestMapping("/voteBoardList.do")
 	public void boardList() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û »ó¼¼º¸±â - voteBoardList");
+		logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ ìƒì„¸ë³´ê¸° - voteBoardList");
 	}
 }
