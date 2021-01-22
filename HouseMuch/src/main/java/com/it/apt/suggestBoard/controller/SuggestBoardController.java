@@ -15,7 +15,7 @@ public class SuggestBoardController {
 	=LoggerFactory.getLogger(UserBoardController.class);
 
 	@RequestMapping(value="/suggestBoardWrite.do",method = RequestMethod.GET)
-	public void boardWrite() {
+	public void boardWrite_get() {
 		logger.info("건의 게시판 글쓰기 화면 보여주기 - suggestBoardWrite");
 	}
 
@@ -34,5 +34,17 @@ public class SuggestBoardController {
 		logger.info("건의 게시판 글 상세보기 - suggestBoardDetail");
 	}
 
-
+	/* 건의게시판 글 등록 */
+	@RequestMapping(value="/suggestBoardWrite.do", method = RequestMethod.POST)
+	public String boardWrite_post() {
+		//1
+		logger.info("건의게시판 글 등록, 파라미터 ");
+		
+		//2
+		
+		//3
+		
+		//4
+		return null;
+	}
 }

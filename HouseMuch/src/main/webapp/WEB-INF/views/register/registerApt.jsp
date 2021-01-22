@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../mainInc/mainTop.jsp" %>
+<%@ include file="../mainInc/nonTop.jsp" %>
 
 <!-- 
 	소유주가 사이트 운영진에게 아파트 신청 => 이메일 보내기 작업 (완료)
