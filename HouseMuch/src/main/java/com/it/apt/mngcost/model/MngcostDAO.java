@@ -7,5 +7,5 @@ public interface MngcostDAO {
 	List<MngcostMainCtgVO> selectMCtgList();
 	List<MngcostSubCtgVO> selectSCtgList(int mngcostMCtgNo);
 	List<MngcostPaymentListVO> selectPayList(String householdCode);
-	List<MngcostInfoVO> selectMngcostInfoByClaim(Map<String, Object> map);
+	List<MngcostInfoVO> selectMngcostInfoByClaim(InquiryInfoVO inqVo);
 }

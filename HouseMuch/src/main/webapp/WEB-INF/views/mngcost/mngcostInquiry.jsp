@@ -4,6 +4,10 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		var str="<tr><th scope='row'>#</th>";
+		str+="<td colspan='3'>내역이 존재하지 않습니다.</td></tr>";
+		$('#mngcostInfoTable').find('tbody').html(str);
+		
 		$('#mngcostMainCtg').change(function(){
 			if($(this).val()==0){
 				$('#mngcostSubCtg').html("<option value='0'>관리비 소분류</option>");
@@ -29,14 +33,15 @@
 			});
 		});
 		
-		$('#mngcostSubCtg').change(function(){
+		$('select.form-control').change(function(){
 			if($(this).val()!=0){
-				if($('#mngcostClaimdate').val()>0){
+				if($('#mngcostClaimdate').val().length>0){
 					$.ajax({
 						url:"<c:url value='/mngcost/showDetail.do'/>",
 						type:"get",
 						data:{
-							mngcostSCtgNo:$(this).val(),
+							mngcostMCtgNo:$('#mngcostMainCtg').val(),
+							mngcostSCtgNo:$('#mngcostSubCtg').val(),
 							mngcostClaimdate:$('#mngcostClaimdate').val()
 						},
 						dataType:"json",
@@ -46,8 +51,8 @@
 								$.each(res, function(idx, item){
 									str+="<tr><th scope='row'>"+item.mngcostNo+"</th>";
 									str+="<td>"+item.mngcostContent+"</td>";
-									str+="<td>"+item.mngcostPrice+"</td>";
-									str+="<td>"+item.mngcostUsedate+"</td></tr>";
+									str+="<td>"+numFormat(item.mngcostPrice)+"원</td>";
+									str+="<td>"+formatDate(item.mngcostUsedate)+"</td></tr>";
 								});
 							}else{
 								str+="<tr><th scope='row'>#</th>";
@@ -60,7 +65,8 @@
 						}
 					});
 				}else{
-					alert("납부 내역을 선택");
+					alert("납부 내역을 선택하세요");
+					$(this).val(0);
 					location.href="#skipTop";
 				}
 			}
@@ -71,13 +77,30 @@
 		alert(date);
 		$('#mngcostClaimdate').val(date);
 	}
+	
+	//천 단위 넘버포맷
+	function numFormat(number){
+		return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+	}
+	
+	//날짜 포맷
+	function formatDate(date) {
+	    var d = new Date(date),
+	        month = '' + (d.getMonth() + 1),
+	        day = '' + d.getDate(),
+	        year = d.getFullYear();
+	    if (month.length < 2) month = '0' + month;
+	    if (day.length < 2) day = '0' + day;
+
+	    return [year, month, day].join('-');
+	};
 </script>
 <!-- ======= Start About Section ======= -->
 <section id="skipTop"></section>
 <section id="about">
 <div class="container">
 	<!-- START : 대시보드 박스 -->
-	<input type="hidden" id="mngcostClaimdate">
+	<input type="text" id="mngcostClaimdate">
 	
 	<div class="app-content content"><!-- 바꾸면 안됨 -->
 	    <!--헤더시작-->
@@ -118,11 +141,9 @@
 		        	</c:if>
 		        	<c:if test="${!empty mngcostPayList}">
 			        	<c:forEach var="mngcostPayListVo" items="${mngcostPayList}">
-				        	<tr>
-					            <th scope="row">
-					            	<a href="#" onclick="sendDate('${mngcostPayListVo.mngcostClaimdate}')">
-					            		상세</a>
-					            </th>
+				        	<tr onclick="sendDate('${mngcostPayListVo.mngcostClaimdate}')"
+				        			style = "cursor:pointer;">
+					            <th scope="row">${mngcostPayListVo.mngcostListNo}</th>
 					            <td id="claimDate">
 					            	<fmt:formatDate value="${mngcostPayListVo.mngcostClaimdate}"
 					            		pattern="yyyy-MM-dd"/>
@@ -152,8 +173,7 @@
 			</table>
 		</div>
 		
-		<div id="mngcostDetailTab"></div>
-	    <h5>상세보기</h5>
+		<h5>상세보기</h5>
 	    <div class="col-md-4 col-6 mb-2 float-left">
 		    <select class="form-control" id="mngcostMainCtg" name="mngcostMainCtg">
 		        <option value="0">관리비 대분류</option>
@@ -182,7 +202,8 @@
 		       <!-- 조회결과가 올 자리 -->
 		     </tbody>
 		   </table>
-		</div> 
+		</div>
+		
 		<!-- col-md-12  -->
 	</div><!-- 대시보드 박스 : 클래스app-content content -->
 </div><!-- content-wrapper:e -->

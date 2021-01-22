@@ -10,16 +10,17 @@ import com.it.apt.userBoard.controller.UserBoardController;
 @Controller
 @RequestMapping("/voteBoard")
 public class VoteBoardController {
-	private static final Logger logger
-	=LoggerFactory.getLogger(UserBoardController.class);
+   private static final Logger logger
+   =LoggerFactory.getLogger(UserBoardController.class);
 
-	@RequestMapping("/voteBoardDetail.do")
-	public void boardDetail() {
-		logger.info("건의 게시판 글 상세보기 - voteBoardDetail");
-	}
-	
-	@RequestMapping("/voteBoardList.do")
-	public void boardList() {
-		logger.info("건의 게시판 글 상세보기 - voteBoardList");
-	}
+   @RequestMapping("/voteBoardDetail.do")
+   public void boardDetail() {
+      logger.info("건의 게시판 글 상세보기 - voteBoardDetail");
+   }
+   
+   @RequestMapping("/voteBoardList.do")
+   public void boardList() {
+      logger.info("건의 게시판 글 상세보기 - voteBoardList");
+   }
 }
+

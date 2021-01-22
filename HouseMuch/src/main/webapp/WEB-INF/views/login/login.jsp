@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../mainInc/mainTop.jsp" %>
+<%@ include file="../mainInc/nonTop.jsp" %>
 
 <!-- 
 	로그인 작업 => 인터셉터 생성 => 권한에 따라 입주민 메인 뷰 혹은 관리자 대시보드 뷰 로 넘기기 = 중간에 view페이지 하나 만들어서 redirect 하게끔 
@@ -51,10 +51,10 @@
 
 								
 								<!-- 로그인 폼 !!!  -->
-                                <form class="auth-login-form mt-2" action="index.html" method="POST">
+                                <form class="auth-login-form mt-2" action="<c:url value='/login/login.do'/>" method="POST">
                                     <div class="form-group">
-                                        <label for="login-email" class="form-label">아이디</label>
-                                        <input type="text" class="form-control" id="login-email" name="login-email" placeholder="HouseMuch" aria-describedby="login-email" tabindex="1" autofocus />
+                                        <label for="login-id" class="form-label">아이디</label>
+                                        <input type="text" class="form-control" id="login-id" name="id" placeholder="HouseMuch" value="${cookie.ck_id.value }" tabindex="1" autofocus />
                                     </div>
 
                                     <div class="form-group">
@@ -62,7 +62,7 @@
                                             <label for="login-password">비밀번호</label>
                                         </div>
                                         <div class="input-group input-group-merge form-password-toggle">
-                                            <input type="password" class="form-control form-control-merge" id="login-password" name="login-password" tabindex="2" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="login-password" />
+                                            <input type="password" class="form-control form-control-merge" id="login-password" name="pwd" tabindex="2" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="login-password" />
                                             <div class="input-group-append">
                                                 <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
                                             </div>
@@ -70,7 +70,11 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox" >
-                                            <input class="custom-control-input" type="checkbox" id="remember-me" tabindex="3" />
+                                            <input class="custom-control-input" type="checkbox" id="remember-me" name="chkSave" tabindex="3" 
+                                            	<c:if test="${!empty cookie.ck_id }">
+                                            		checked="checked"
+                                            	</c:if>
+                                            >
                                             <label class="custom-control-label" for="remember-me"> 아이디 기억하기 </label>
                                         </div>
                                     </div>

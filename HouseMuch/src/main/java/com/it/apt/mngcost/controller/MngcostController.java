@@ -70,15 +70,10 @@ public class MngcostController {
 		//String aptNo=(String)session.getAttribute("");
 		logger.info("관리비 상세보기, inqVo={}", inqVo);
 		
-		List<MngcostInfoVO> MngcostInfoList=null;
+		inqVo.setAptNo(1);//세션 아파트번호
 		
-		Map<String, Object> map=new HashMap<String, Object>();
-		map.put("aptNo", 1); //세션 아파트 번호로 변경해야함
-		map.put("mngcostClaimdate", inqVo.getMngcostClaimdate());
-		map.put("mngcostSCtgNo", inqVo.getMngcostSCtgNo());
-		
-		
-		MngcostInfoList=mngcostService.selectMngcostInfoByClaim(map);
+		List<MngcostInfoVO> MngcostInfoList
+			=mngcostService.selectMngcostInfoByClaim(inqVo);
 		logger.info("관리비 상세보기 조회 결과 MngcostInfoList={}", MngcostInfoList);
 		
 		return MngcostInfoList;

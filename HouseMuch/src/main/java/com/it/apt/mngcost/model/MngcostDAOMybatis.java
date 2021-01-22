@@ -28,7 +28,7 @@ public class MngcostDAOMybatis implements MngcostDAO{
 	}
 
 	@Override
-	public List<MngcostInfoVO> selectMngcostInfoByClaim(Map<String, Object> map) {
-		return sqlSession.selectList(namespace+"selectMngcostInfoByClaim", map);
+	public List<MngcostInfoVO> selectMngcostInfoByClaim(InquiryInfoVO inqVo) {
+		return sqlSession.selectList(namespace+"selectMngcostInfoByClaim", inqVo);
 	}
 }

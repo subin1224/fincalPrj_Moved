@@ -1,70 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../mainInc/nonTop.jsp" %>
 
-<style type="text/css">
-.next-btn {
-    float: right;
-    width: 10%;
-    height: 100%;
-    background: #5c9f24;
-    color: #ffffff;
-    font-size: 24px;
-    line-height: inherit;
-    border: 0;
-    outline: 0;
-}
-.form-row{
-	display:block;
-}
-.subin-button {
-	color: #FFFFFF;
-    background-color: #7DB249;
-    border-color: #7DB249;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/app-assets/css/components.css">
-
-<!-- 
-	해당 이름과 등록한 이메일 계정에 맞는 아이디 전체 출력
- -->
-
-<!-- ======= Section ======= -->
-	<section class="contact">
-		<div class="container card" style="margin-top: 50px; margin-bottom: 50px; padding-top:80px; padding-bottom:50px;">
-			
-			<div align="center" style="margin-bottom:50px;"><img src="<c:url value='/resources/common_img/findId.png'/>" alt="findId"></div>
-			
-			<div style="width:800px; float: left; margin-left: 300px; margin-bottom: 30px; ">
-				<h4>조회하신 결과, 회원님의 아이디를 보여드립니다.</h4>
-			</div>
-	         
-	
-			<div class="form col-lg-12 php-email-form " align="center">
-			
-				<h3><span> USERID </span></h3>
-				<br>
-				<input type="button" class="btn subin-button" onclick="location.href='<c:url value="/login/login.do"/>'" value="로그인 하러 가기">
-			</div>     
-			   
- 			<br><br>
- 			
-  			<div class="divider my-2">
-            	<div class="divider-text">or</div>
-            </div>
-            			
- 			<div class="form-group" align="center" style="margin-top:20px;">
- 				<label>비밀번호를 찾으시나요?</label>
- 				<a href="<c:url value='/login/findPwd.do'/>">비밀번호 찾기</a>
- 			</div>
- 			
- 		</div>
-	</section>
-
-	<!-- End About Section -->
-	
-	<!-- main.js 적용 안하려고 일부러 bottom 가져옴 -->
-	
 <!-- ======= Footer ======= -->
 <footer id="footer">
 	<div class="footer-top">
@@ -140,6 +76,7 @@
 <script src="${pageContext.request.contextPath}/resources/user/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
 <!-- Template Main JS File -->
+<script src="${pageContext.request.contextPath}/resources/user/assets/js/main.js"></script>
 
 </body>
 

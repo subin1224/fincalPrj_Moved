@@ -31,14 +31,15 @@
 
 	<util:properties id="fileUploadProperties"
 		location="classpath:/config/props/fileUpload.properties" />
-
+		
+    <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />  
 
 	<bean id="mailSender"
 		class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
 		<property name="username" value="salllena33@gmail.com" />
-		<property name="password" value="Bbinya_eve1" />
+		<property name="password" value="Bbinya_eve1224" />
 		<property name="javaMailProperties">
 			<props>
 				<prop key="mail.smtp.starttls.enable">true</prop>

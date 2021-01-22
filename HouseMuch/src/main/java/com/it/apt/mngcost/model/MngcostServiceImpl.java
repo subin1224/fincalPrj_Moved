@@ -26,7 +26,7 @@ public class MngcostServiceImpl implements MngcostService{
 	}
 
 	@Override
-	public List<MngcostInfoVO> selectMngcostInfoByClaim(Map<String, Object> map) {
-		return mngcostDao.selectMngcostInfoByClaim(map);
+	public List<MngcostInfoVO> selectMngcostInfoByClaim(InquiryInfoVO inqVo) {
+		return mngcostDao.selectMngcostInfoByClaim(inqVo);
 	}
 }
