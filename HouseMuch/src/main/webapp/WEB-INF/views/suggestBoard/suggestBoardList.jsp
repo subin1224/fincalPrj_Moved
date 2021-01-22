@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../mainInc/mainTop.jsp"%>
 
+<link href="${pageContext.request.contextPath}/resources/userBoard/css/boardStyle.css" rel="stylesheet">
+
 <c:if test="">
 	<p>검색어 : 건 검색되었습니다.</p>
 </c:if>

@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../mainInc/mainTop.jsp"%>
 
+<link href="${pageContext.request.contextPath}/resources/userBoard/css/boardStyle.css" rel="stylesheet">
 <style type="text/css">
 .ck-editor__editable {
 	min-height: 400px;

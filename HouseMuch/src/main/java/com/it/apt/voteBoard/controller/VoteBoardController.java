@@ -23,3 +23,4 @@ public class VoteBoardController {
       logger.info("건의 게시판 글 상세보기 - voteBoardList");
    }
 }
+
