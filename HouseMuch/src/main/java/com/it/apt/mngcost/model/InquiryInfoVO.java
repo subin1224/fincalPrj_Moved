@@ -6,6 +6,7 @@ public class InquiryInfoVO {
 	private int aptNo;
     private Timestamp mngcostClaimdate;
     private int mngcostSCtgNo;
+    private int mngcostMCtgNo;
     
 	public int getAptNo() {
 		return aptNo;
@@ -25,10 +26,16 @@ public class InquiryInfoVO {
 	public void setMngcostSCtgNo(int mngcostSCtgNo) {
 		this.mngcostSCtgNo = mngcostSCtgNo;
 	}
+	public int getMngcostMCtgNo() {
+		return mngcostMCtgNo;
+	}
+	public void setMngcostMCtgNo(int mngcostMCtgNo) {
+		this.mngcostMCtgNo = mngcostMCtgNo;
+	}
 	
 	@Override
 	public String toString() {
 		return "InquiryInfoVO [aptNo=" + aptNo + ", mngcostClaimdate=" + mngcostClaimdate + ", mngcostSCtgNo="
-				+ mngcostSCtgNo + "]";
+				+ mngcostSCtgNo + ", mngcostMCtgNo=" + mngcostMCtgNo + "]";
 	}
 }

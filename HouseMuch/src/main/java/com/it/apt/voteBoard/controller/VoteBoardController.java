@@ -10,16 +10,16 @@ import com.it.apt.userBoard.controller.UserBoardController;
 @Controller
 @RequestMapping("/voteBoard")
 public class VoteBoardController {
-	private static final Logger logger
-	=LoggerFactory.getLogger(UserBoardController.class);
+   private static final Logger logger
+   =LoggerFactory.getLogger(UserBoardController.class);
 
-	@RequestMapping("/voteBoardDetail.do")
-	public void boardDetail() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û »ó¼¼º¸±â - voteBoardDetail");
-	}
-	
-	@RequestMapping("/voteBoardList.do")
-	public void boardList() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û »ó¼¼º¸±â - voteBoardList");
-	}
+   @RequestMapping("/voteBoardDetail.do")
+   public void boardDetail() {
+      logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ ìƒì„¸ë³´ê¸° - voteBoardDetail");
+   }
+   
+   @RequestMapping("/voteBoardList.do")
+   public void boardList() {
+      logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ ìƒì„¸ë³´ê¸° - voteBoardList");
+   }
 }
