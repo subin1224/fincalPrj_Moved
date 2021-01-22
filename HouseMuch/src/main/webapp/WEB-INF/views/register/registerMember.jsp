@@ -3,16 +3,12 @@
 <%@ include file="../mainInc/mainTop.jsp" %>
 
 <!-- 
-	소유주가 사이트 운영진에게 아파트 신청 => 이메일 보내기 작업 (완료)
-	유효성 완료
+	가입[3]
+	아이디 / 비밀번호 / 비밀번호 확인 / 이름 /이메일=인증번호 전송 / 휴대폰번호 = 3칸 
+	유효성 검사
+	-> 아이디 중복확인은 ajax로 change 할때마다 = msg ajax에서 적용 ( 이미 존재하는 아이디 입니다. / 사용 가능한 아이디 입니다. ) , input hidden (아이디 중복체크 결과 ) Y N 조절
 	
-    <script src="${pageContext.request.contextPath}/resources/app-assets/vendors/js/vendors.min.js"></script>
-    
-   
-    <script src="${pageContext.request.contextPath}/resources/app-assets/js/core/app-menu.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/app-assets/js/core/app.js"></script>
-    
-    해당 js들 지우니까 잘됨 ... 하 ... ㅠㅠ
+	-> 프로필 사진 설정은 마이페이지의 회원수정에서 가능
  -->
 
     <!-- BEGIN: Vendor CSS-->
@@ -56,45 +52,64 @@
                                     <!--  <h2 class="brand-text text-primary ml-1" style="color: #5c9f24;">HouseMuch</h2> -->
                                     <img alt="하우스머치 로고" src='<c:url value="/resources/aptUser_images/housemuch_logo.png"/>'>
                                 </a>
-								<p>우리 아파트도 HOUSE MUCH 와 함께 하고 싶으신가요? <br>간단하게 신청하세요!</p>
+                                <p class="mt-1">HOUSEMUCH에 오신걸 환영합니다!<br>발급받으신 세대키에 따라 주소가 자동 등록 되어 들어갑니다.</p>
 								
-								<!-- 신청 폼 !!!  -->
+							
 								
-                                <form id="frmApt" class=" mt-2" action="<c:url value='/email/aptMail.do'/>" method="POST">
+								<!-- 가입 폼 !!!  -->
+                                <form class="auth-register-form mt-1 p-2" action="#" method="POST">
+                                    <input type="hidden" id="chkId">
                                     <div class="form-group">
-                                        <label for="subject" class="form-label" style="font-size: 15px;">아파트명</label>
-                                        <input type="text" class="form-control" id="subject" name="subject" tabindex="1" autofocus/>
+                                        <label for="id" class="form-label" style="font-size: 15px;">아이디</label>
+                                        <input type="text" class="form-control" id="id" name="id" style="ime-mode:inactive" tabindex="1" autofocus />
+                                    	<span class="error"> </span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="senderName" class="form-label" style="font-size: 15px;">이름</label>
-                                        <input type="text" class="form-control" id="senderName" name="senderName" tabindex="2"  />
+                                        <label for="pwd" class="form-label" style="font-size: 15px;">비밀번호</label>
+                                        <input type="password" class="form-control" id="pwd" name="pwd" tabindex="2" />
+                                    	<span class="error"></span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="hp" class="form-label" style="font-size: 15px;">연락처</label>
-                                        <input type="text" class="form-control" id="hp" name="hp" tabindex="3"  />
+                                        <label for="pwd2" class="form-label" style="font-size: 15px;">비밀번호 확인</label>
+                                        <input type="password" class="form-control" id="pwd2" name="pwd"  tabindex="3"/>
+                                    	<span class="error"></span>
                                     </div>
+			 						
 			 						<div class="form-group">
-                                        <label for="email" class="form-label" style="font-size: 15px;">메일</label>
-										<input type="email" class="form-control" name="email" id="email" data-rule="email" tabindex="4">
+                                        <label for="memberName" class="form-label" style="font-size: 15px;">이름</label>
+										<input type="text" class="form-control" name="memberName" id="memberName" tabindex="4">
+										<span class="error"></span>
 									</div>
-									<div class="form-group">
-                                        <label for="message" class="form-label" style="font-size: 15px;">문의사항</label>
-										<textarea class="form-control" name="message" rows="5" tabindex="5" id="message" ></textarea>
-									</div>									
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox" >
-                                            <input class="custom-control-input" type="checkbox" id="remember-me" />
-                                            <label class="custom-control-label" for="remember-me"> 동의합니다 </label>
-                                            <div>
-                                            	고객 상담을 위하여 성함, 이메일, 아파트명, 전화번호를 수집하며
-                                            	최대 3개월 까지 보관 후 파기합니다. 수집된 정보는 명시된 목적 외에 
-                                            	다른 목적으로 사용되지 않습니다.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <input type="button" class="btn btn-block btn-primary" style="font-size: 15px;" id="send" value="제출하기">
+			 						
+			 						<div class="form-group">
+                                        <label for="email" class="form-label" style="font-size: 15px;">이메일</label>
+										<input type="email" class="form-control" name="email" id="email" tabindex="5">
+										<span class="error"></span>
+									</div>
+									
+			 						<div class="form-group">
+                                        <label for="aptName" class="form-label" style="font-size: 15px;">휴대전화(선택사항)</label>
+										<div class="row d-flex align-items-end m-auto" >
+											<div class="col-md-4 col-4">
+												<input type="number" class="form-control row" name="hp1" id="hp1" style="display: inline;" tabindex="6" maxlength="3">
+												<span style="margin-left: 15px;">&nbsp;-</span>									
+											</div>
+											<div class="col-md-4 col-4">
+												<input type="number" class="form-control row" name="hp2" id="hp2" style="display: inline;" tabindex="7" maxlength="4">
+												<span style="margin-left: 15px;">&nbsp;-</span>
+											</div>
+											<div class="col-md-4 col-4">
+												<input type="number" class="form-control row" name="hp3" id="hp3" style="display: inline;" tabindex="8" maxlength="4">
+											</div>
+										</div>
+										<span class="error"></span>
+									</div>
+																	
+                                    
+                                    
+                                    <button class="btn btn-block btn-primary mt-5 mb-3" tabindex="9" style="font-size: 15px;" id="join">가입하기</button>
                                 </form>
-								
+
                                
                                
 
@@ -186,66 +201,119 @@
 	
 	<!-- Template Main JS File -->
 	<script src="${pageContext.request.contextPath}/resources/user/assets/js/main.js"></script>
-
+    <!-- BEGIN: Vendor JS-->
+    <script src="${pageContext.request.contextPath}/resources/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
     <script src="${pageContext.request.contextPath}/resources/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
     <!-- END: Page Vendor JS-->
 
+    <!-- BEGIN: Theme JS-->
+    <script src="${pageContext.request.contextPath}/resources/app-assets/js/core/app-menu.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
     <script src="${pageContext.request.contextPath}/resources/app-assets/js/scripts/pages/page-auth-login.js"></script>
     <!-- END: Page JS-->
-    
+	
+	<script type="text/javascript" src="<c:url value='/resources/js/member.js'/>"></script>
     <script>
-        $(window).on('load', function() {
-           
-            $('.nav-menu ul li').last().addClass('active');
-            
-            $('#send').click(function(){
-            	
-            	if($('#subject').val().length<1){
-            		alert('아파트 명을 입력해주세요!');
-            		$('#subject').focus();
-            		event.preventDefault();
-            		return false;
-            	}
-            	if($('#senderName').val().length<1){
-            		alert('이름을 입력해주세요!');
-            		$('#senderName').focus();
-            		event.preventDefault();
-            		return false;
-            	}
-            	if($('#hp').val().length<1){
-            		alert('연락처를 입력해주세요!');
-            		$('#hp').focus();
-            		event.preventDefault();
-            		return false;
-            	}
-            	if($('#email').val().length<1){
-            		alert('이메일을 입력해주세요!');
-            		$('#email').focus();
-            		event.preventDefault();
-            		return false;
-            	}
-            	if($('#message').val().length<1){
-            		alert('문의사항 내용을 입력해주세요!');
-            		$('#message').focus();
-            		event.preventDefault();
-            		return false;
-            	}
-            	if(!$('#remember-me').is(":checked")){
-            		alert('약관에 동의 해주셔야 신청이 진행됩니다.');
-            		$('#remember-me').focus();
-            		event.preventDefault();
-            		return false;
-            	}
-            	
-            	$('#frmApt').submit();
-            });//submit
+        $(function(){
+        	if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        	
+        	//
+        	$('input[type=text]').each(function(){
+        		$(this).blur(function(){
+        			if($(this).val().length<1){
+        				$(this).next().html('필수 입력 사항 입니다');
+        			}else{
+        				$(this).next().html('');
+        			}
+        		});
+        	});
+        	
+        	$('#id').blur(function(){
+        		if($(this).val().length<1){
+        			$(this).next().html('필수 입력 사항 입니다');
+        		}else{
+	        		if(!validate_userid($('#id').val())){
+	        			$(this).next().html('아이디는 영문,숫자,특수기호 _만 가능합니다.');
+	        		}else{
+	        			$(this).next().html('');
+	        		}        			
+        		}
+        	});
+        	
+        	$('#pwd').blur(function(){
+        		if($(this).val().length<1){
+        			$(this).next().html('필수 입력 사항 입니다');
+        		}else{
+        			$(this).next().html('');
+        		}
+        	});
+        	
+        	$('#pwd2').blur(function(){
+        		if($('#pwd').val()!=$('#pwd2').val()){
+        			$(this).next().html('비밀번호가 일치하지 않습니다');
+        		}else{
+        			$(this).next().html('');        			
+        		}
+        	});
+        	
+        	$('#email').blur(function(){
+        		if($('#email').val().length<1){
+        			$(this).next().html('필수 입력 사항 입니다');
+    			}else{
+    				$(this).next().html('');
+    				if(!isEmail($(this).val())){
+        				$(this).next().html('이메일 형식에 맞지 않습니다.');
+        			}else{
+    					$(this).next().html('');        				
+        			}
+    			}
+        		
+        	});
+        	
+    	
+        	//유효성 체크
+    		$('#join').click(function(){
+        		if($('#id').val().length<1){
+       				alert('아이디는 를 입력해주세요.');
+       				$('#id').focus();
+       				event.preventDefault();				
+       			}else if(!validate_userid($('#id').val())){
+       				alert('아이디는 영문,숫자,특수기호 _만 가능합니다.');
+       				$('#id').focus();
+       				event.preventDefault();				
+       			}else if($('#pwd').val().length<1){
+       				alert('비밀번호를 입력하세요');
+       				$('#pwd').focus();
+       				event.preventDefault();
+       			}else if($('#pwd').val()!=$('#pwd2').val()){
+       				alert('비밀번호가 일치하지 않습니다.');
+       				$('#pwd2').focus();
+       				event.preventDefault();
+       			}else if($('#memberName').val().length<1){
+       				alert('이름을 입력하세요.');
+       				$('#memberName').focus();
+       				event.preventDefault();
+       			}else if($('#email').val().length<1){
+       				alert('이메일을 입력하세요.');
+       				$('#email').focus();
+       				event.preventDefault();
+       			}
+    		});
+        	
         });
-            
-        
+
+
     </script>
     
 </body>

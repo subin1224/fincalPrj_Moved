@@ -79,7 +79,7 @@
 
                                 <p class="text-center mt-2">
                                     <span>처음 오셨나요?</span>
-                                    <a href="page-auth-register-v1.html">
+                                    <a href="<c:url value='/register/registerChkKey.do'/>">
                                         <span>가입하기</span>
                                     </a>
                                 </p>
