@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../mainInc/mainTop.jsp" %>
+<%@ include file="../mainInc/nonTop.jsp" %>
 
 <!-- 
 	문의하기 폼 에서 이메일 Send (완료)
@@ -490,4 +490,4 @@
 </main>
 <!-- End #main -->
 
-<%@ include file="../mainInc/mainBottom.jsp" %>
+<%@ include file="../mainInc/nonBottom.jsp" %>

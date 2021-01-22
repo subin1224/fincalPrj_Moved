@@ -48,32 +48,41 @@
     <div class="container d-flex align-items-center col-lg-10">
 
       <h1 class="logo mr-auto"><a href='<c:url value='/main/index.do'/>'> 
-      <img alt="하우스머치 로고" src='<c:url value="/resources/aptUser_images/housemuch_logo.png"/>'>
-      </a></h1>
+		<img alt="하우스머치 로고" src='<c:url value="/resources/aptUser_images/housemuch_logo.png"/>'>
+		</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.jsp" class="logo mr-auto"><img src="${pageContext.request.contextPath}/resources/user/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <div class="nav-menu d-none d-lg-block">
+      <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="<c:url value='/mngcost/mngcostInquiry.do'/>">관리비 조회</a></li>
-          <li><a href="<c:url value='#'/>">에너지 조회</a></li>
-          <li><a href="<c:url value='#'/>">생활지원 센터</a></li>
-          <li><a href="<c:url value='#'/>">커뮤니티</a></li>
-          <li><a href="<c:url value='#'/>">관리비 납부</a></li>
-          <li><a href="<c:url value='#'/>">chat</a></li>
-          <li class="drop-down"><a href="">user1</a>
+          <li><a href="<c:url value='/main/index.do#why-us'/>">소개</a></li>
+          <li><a href="<c:url value='/main/index.do#contact'/>">문의하기</a></li>
+          <li><a href="<c:url value='/register/registerApt.do'/>">신청하기</a></li>
+          
+          <!--
+          <li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          
+          -->
           
         </ul>
-      </div><!-- .nav-menu -->
+      </nav><!-- .nav-menu -->
 
+      <a href="<c:url value='/login/login.do'/>" class="get-started-btn " id="login">로그인</a>
 
     </div>
   </header><!-- End Header -->
