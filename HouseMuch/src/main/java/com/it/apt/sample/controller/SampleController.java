@@ -10,245 +10,240 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SampleController {
    
    private Logger logger = LoggerFactory.getLogger(SampleController.class);
-   
+      
    @RequestMapping("/Analytics.do")
    public void analytics() {
-      logger.info("Analytics È­¸é º¸¿©ÁÖ±â!");
+      logger.info("Analytics í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/eCommerce.do")
    public void eCommerce() {
-      logger.info("eCommerce È­¸é º¸¿©ÁÖ±â!");
+      logger.info("eCommerce í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/email.do")
    public void email() {
-      logger.info("email È­¸é º¸¿©ÁÖ±â!");
+      logger.info("email í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/chat.do")
    public void chat() {
-      logger.info("chat È­¸é º¸¿©ÁÖ±â!");
+      logger.info("chat í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/calendar.do")
    public void calendar() {
-      logger.info("calendar È­¸é º¸¿©ÁÖ±â!");
+      logger.info("calendar í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-invoice-list.do")
    public void app_invoice_list() {
-      logger.info("app-invoice-list.jsp È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-invoice-list.jsp í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-invoice-add.do")
    public void app_invoice_add() {
-      logger.info("app-invoice-add.jsp È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-invoice-add.jsp í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-invoice-edit.do")
    public void app_invoice_edit() {
-      logger.info("app-invoice-edit.jsp È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-invoice-edit.jsp í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-invoice-preview.do")
    public void app_invoice_preview() {
-      logger.info("app-invoice-preview.jsp È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-invoice-preview.jsp í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-ecommerce-shop.do")
    public void app_ecommerce_shop() {
-      logger.info("app-ecommerce-shop.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-ecommerce-shop.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/app-ecommerce-checkout.do")
    public void app_ecommerce_checkout() {
-      logger.info("app-ecommerce-checkout.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-ecommerce-checkout.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/app-ecommerce-wishlist.do")
    public void app_ecommerce_wishlist() {
-      logger.info("app-ecommerce-wishlist.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-ecommerce-wishlist.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/app-ecommerce-details.do")
    public void app_ecommerce_details() {
-      logger.info("app-ecommerce-details.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-ecommerce-details.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-user-list.do")
    public void app_ecommerce_list() {
-      logger.info("app-user-list.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-user-list.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-user-edit.do")
    public void app_ecommerce_edit() {
-      logger.info("app-user-edit.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-user-edit.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/app-user-view.do")
    public void app_ecommerce_view() {
-      logger.info("app-user-view.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("app-user-view.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-auth-login-v1.do")
    public void page_auth_login_v1() {
-      logger.info("page-auth-login-v1 È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-auth-login-v1 í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-auth-register-v1.do")
    public void page_auth_register_v1() {
-      logger.info("page-auth-register-v1 È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-auth-register-v1 í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-auth-forgot-password-v1.do")
    public void page_auth_forgot_password_v1() {
-      logger.info("page-auth-forgot-password-v1 È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-auth-forgot-password-v1 í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-auth-reset-password-v1.do")
    public void page_auth_reset_password_v1() {
-      logger.info("page-auth-reset-password-v1 È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-auth-reset-password-v1 í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-account-settings.do")
    public void page_account_settings() {
-      logger.info("page-account-settings.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-account-settings.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-profile.do")
    public void page_profile() {
-      logger.info("page-profile.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-profile.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-faq.do")
    public void page_faq() {
-      logger.info("page-faq.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-faq.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-pricing.do")
    public void page_pricing() {
-      logger.info("page-pricing.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-pricing.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-blog-list.do")
    public void page_blog_list() {
-      logger.info("page-blog-list.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-blog-list.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/page-blog-detail.do")
    public void page_blog_detail() {
-      logger.info("page-blog-detail.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-blog-detail.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-blog-edit.do")
    public void page_blog_edit() {
-      logger.info("page-blog-edit.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-blog-edit.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/page-misc-error.do")
    public void page_blog_misc_error() {
-      logger.info("page-misc-error.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("page-misc-error.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/ui-typography.do")
    public void ui_typography() {
-      logger.info("ui-typography.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("ui-typography.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/ui-colors.do")
    public void ui_colors() {
-      logger.info("ui-colors.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("ui-colors.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/ui-feather.do")
    public void ui_feather() {
-      logger.info("ui-feather.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("ui-feather.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/card-basic.do")
    public void card_basic() {
-      logger.info("card-basic.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("card-basic.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/card-advance.do")
    public void card_advance() {
-      logger.info("card-advance.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("card-advance.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/card-statistics.do")
    public void card_statistics() {
-      logger.info("card-statistics.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("card-statistics.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/card-analytics.do")
    public void card_analytics() {
-      logger.info("card-analytics.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("card-analytics.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/card-actions.do")
    public void card_actions() {
-      logger.info("card-actions.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("card-actions.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/form-input-mask.do")
    public void form_input_mask() {
-      logger.info("form-input-mask.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("form-input-mask.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/form-date-time-picker.do")
    public void form_date_time_picker() {
-      logger.info("form-date-time-picker.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("form-date-time-picker.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/form-layout.do")
    public void form_layout() {
-      logger.info("form-layout.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("form-layout.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/form-wizard.do")
    public void form_wizard() {
-      logger.info("form-wizard.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("form-wizard.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/form-validation.do")
    public void form_validation() {
-      logger.info("form-validation.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("form-validation.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/form-repeater.do")
    public void form_repeater() {
-      logger.info("form-repeater.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("form-repeater.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/table-datatable-basic.do")
    public void form_basic() {
-      logger.info("table-datatable-basic.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("table-datatable-basic.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/table-datatable-advanced.do")
    public void form_advanced() {
-      logger.info("table-datatable-advanced.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("table-datatable-advanced.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/chart-apex.do")
    public void chart_apex() {
-      logger.info("chart-apex.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("chart-apex.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
    @RequestMapping("/chart-chartjs.do")
    public void chart_chartjs() {
-      logger.info("chart-chartjs.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("chart-chartjs.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
 
    @RequestMapping("/maps-leaflet.do")
    public void maps_leaflet() {
-      logger.info("maps-leaflet.do È­¸é º¸¿©ÁÖ±â!");
-   }
-   
-   @RequestMapping("/table-bootstrap.do")
-   public void table_bootstrap() {
-	   logger.info("table-bootstrap.do È­¸é º¸¿©ÁÖ±â!");
+      logger.info("maps-leaflet.do í™”ë©´ ë³´ì—¬ì£¼ê¸°!");
    }
    
 }

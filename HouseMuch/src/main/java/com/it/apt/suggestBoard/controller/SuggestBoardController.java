@@ -16,22 +16,22 @@ public class SuggestBoardController {
 
 	@RequestMapping(value="/suggestBoardWrite.do",method = RequestMethod.GET)
 	public void boardWrite() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û¾²±â È­¸é º¸¿©ÁÖ±â - suggestBoardWrite");
+		logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ì“°ê¸° í™”ë©´ ë³´ì—¬ì£¼ê¸° - suggestBoardWrite");
 	}
 
 	@RequestMapping("/suggestBoardList.do")
 	public void boardList() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ¸ñ·Ï º¸¿©ÁÖ±â - suggestBoardList");
+		logger.info("ê±´ì˜ ê²Œì‹œíŒ ëª©ë¡ ë³´ì—¬ì£¼ê¸° - suggestBoardList");
 	}
 
 	@RequestMapping(value="/suggestBoardEdit.do",method = RequestMethod.GET)
 	public void boardEdit() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û¼öÁ¤ È­¸é º¸¿©ÁÖ±â - suggestBoardEdit");
+		logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ìˆ˜ì • í™”ë©´ ë³´ì—¬ì£¼ê¸° - suggestBoardEdit");
 	}
 
 	@RequestMapping("/suggestBoardDetail.do")
 	public void boardDetail() {
-		logger.info("°ÇÀÇ °Ô½ÃÆÇ ±Û »ó¼¼º¸±â - suggestBoardDetail");
+		logger.info("ê±´ì˜ ê²Œì‹œíŒ ê¸€ ìƒì„¸ë³´ê¸° - suggestBoardDetail");
 	}
 
 

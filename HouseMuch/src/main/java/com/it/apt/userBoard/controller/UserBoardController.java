@@ -14,26 +14,26 @@ public class UserBoardController {
 
 	@RequestMapping(value="/userBoardWrite.do",method = RequestMethod.GET)
 	public void boardWrite() {
-		logger.info("ÀÔÁÖ¹Î °Ô½ÃÆÇ ±Û¾²±â È­¸é º¸¿©ÁÖ±â - userBoardWrite");
+		logger.info("ì…ì£¼ë¯¼ ê²Œì‹œíŒ ê¸€ì“°ê¸° í™”ë©´ ë³´ì—¬ì£¼ê¸° - userBoardWrite");
 	}
 	
 	@RequestMapping("/userBoardList.do")
 	public void boardList() {
-		logger.info("ÀÔÁÖ¹Î °Ô½ÃÆÇ ¸ñ·Ï º¸¿©ÁÖ±â - userBoardList");
+		logger.info("ì…ì£¼ë¯¼ ê²Œì‹œíŒ ëª©ë¡ ë³´ì—¬ì£¼ê¸° - userBoardList");
 	}
 	
 	@RequestMapping(value="/userBoardEdit.do",method = RequestMethod.GET)
 	public void boardEdit() {
-		logger.info("ÀÔÁÖ¹Î °Ô½ÃÆÇ ±Û¼öÁ¤ È­¸é º¸¿©ÁÖ±â - userBoardEdit");
+		logger.info("ì…ì£¼ë¯¼ ê²Œì‹œíŒ ê¸€ìˆ˜ì • í™”ë©´ ë³´ì—¬ì£¼ê¸° - userBoardEdit");
 	}
 	
 	@RequestMapping("/userBoardDetail.do")
 	public void boardDetail() {
-		logger.info("ÀÔÁÖ¹Î °Ô½ÃÆÇ ±Û »ó¼¼º¸±â - userBoardDetail");
+		logger.info("ì…ì£¼ë¯¼ ê²Œì‹œíŒ ê¸€ ìƒì„¸ë³´ê¸° - userBoardDetail");
 	}
 	
 	@RequestMapping("/test.do")
 	public void test() {
-		logger.info("ÀÔÁÖ¹Î °Ô½ÃÆÇ ±Û¾²±â È­¸é º¸¿©ÁÖ±â - test");
+		logger.info("ì…ì£¼ë¯¼ ê²Œì‹œíŒ ê¸€ì“°ê¸° í™”ë©´ ë³´ì—¬ì£¼ê¸° - test");
 	}
 }

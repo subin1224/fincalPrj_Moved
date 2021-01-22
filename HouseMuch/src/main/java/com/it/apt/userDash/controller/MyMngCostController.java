@@ -15,6 +15,6 @@ public class MyMngCostController {
 	
 	@RequestMapping("/userMngCost.do")
 	public void userMngCost() {
-		logger.info("°ü¸®ºñ ³³ºÎ ³»¿ª È­¸é º¸¿©ÁÖ±â - userMngCost");
+		logger.info("ê´€ë¦¬ë¹„ ë‚©ë¶€ ë‚´ì—­ í™”ë©´ ë³´ì—¬ì£¼ê¸° - userMngCost");
 	}
 }
