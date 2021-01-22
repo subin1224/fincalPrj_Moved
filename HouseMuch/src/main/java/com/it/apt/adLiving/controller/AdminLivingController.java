@@ -10,21 +10,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/admin/adminLiving")
 public class AdminLivingController {
 
-	private static final Logger logger = LoggerFactory.getLogger(AdminLivingController.class);
-	
-	@RequestMapping("/adLiving.do")
-	public void adLiving_get() {
-		logger.info("adLiving - í–‰ì •ê´€ë¦¬ì ë©”ì¸í™”ë©´ ë³´ì—¬ì£¼ê¸°");
-		//return "admin/adminLiving/adLiving";
-	}
-	
-	@RequestMapping(value = "/adNotice.do",method = RequestMethod.GET)
-	public String adNotice_get() {
-		logger.info("adNotice - ê³µì§€ë“±ë¡ í™”ë©´ë³´ì—¬ì£¼ê¸°");
-		return "admin/adminLiving/adNotice";
-	}
-	
-	
-	
-	
+   private static final Logger logger = LoggerFactory.getLogger(AdminLivingController.class);
+   
+   @RequestMapping("/adLiving.do")
+   public void adLiving_get() {
+      logger.info("adLiving - ÇàÁ¤°ü¸®ÀÚ ¸ŞÀÎÈ­¸é º¸¿©ÁÖ±â");
+      //return "admin/adminLiving/adLiving";
+   }
+   
+   @RequestMapping(value = "/adNotice.do",method = RequestMethod.GET)
+   public String adNotice_get() {
+      logger.info("adNotice - °øÁöµî·Ï È­¸éº¸¿©ÁÖ±â");
+      return "admin/adminLiving/adNotice";
+   }
+   
+   
+   
+   
 }

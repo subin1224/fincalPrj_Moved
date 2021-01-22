@@ -32,6 +32,7 @@
 
   <!-- Template Main CSS File -->
   <link href="${pageContext.request.contextPath}/resources/user/assets/css/style.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/resources/userBoard/css/boardStyle.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Groovin - v2.2.0
