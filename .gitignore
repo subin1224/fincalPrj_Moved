@@ -5,3 +5,5 @@ database.properties
 fileUpload.properties
 *.class
 .class
+context-common.xml
+context-database.xml
