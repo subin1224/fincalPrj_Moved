@@ -14,7 +14,6 @@ public class IndexController {
 	@RequestMapping(value = "/user/mydash/userDash.do", method = RequestMethod.GET)
 	public void index() {
 		logger.info("에러가 안나라 얍!!");
-
 	}	
 	
 	@RequestMapping("/main/index.do")
@@ -26,9 +25,5 @@ public class IndexController {
 	public void main() {
 		logger.info("메인 화면 보여주기");
 	}
-	
-	@RequestMapping(value="/register/registerApt.do", method = RequestMethod.GET)
-	public void adminRegister_get() {
-		logger.info("APT신청하기 View!!");
-	}	
+
 }
