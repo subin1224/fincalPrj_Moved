@@ -8,22 +8,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class IndexController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+   
+   private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
-	@RequestMapping(value = "/user/mydash/userDash.do", method = RequestMethod.GET)
-	public void index() {
-		logger.info("ì—ëŸ¬ê°€ ì•ˆë‚˜ë¼ ì–!!");
-	}	
-	
-	@RequestMapping("/main/index.do")
-	public void index_main() {
-		logger.info("ë©”ì¸ í™”ë©´ ì „ì²´ ë³´ì—¬ì£¼ê¸°");
-	}	
-	
-	@RequestMapping("/main/main.do")
-	public void main() {
-		logger.info("ë©”ì¸ í™”ë©´ ë³´ì—¬ì£¼ê¸°");
-	}
 
+   @RequestMapping(value = "/user/mydash/userDash.do", method = RequestMethod.GET)
+   public void index() {
+      logger.info("¿¡·¯°¡ ¾È³ª¶ó ¾å!!");
+   }   
+   
+   @RequestMapping("/main/index.do")
+   public void index_main() {
+      logger.info("¸ŞÀÎ È­¸é ÀüÃ¼ º¸¿©ÁÖ±â");
+   }   
+   
+   @RequestMapping("/main/main.do")
+   public void main() {
+      logger.info("¸ŞÀÎ È­¸é º¸¿©ÁÖ±â");
+   }
+   
 }
+
