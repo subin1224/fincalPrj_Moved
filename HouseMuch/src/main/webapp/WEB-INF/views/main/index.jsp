@@ -3,7 +3,7 @@
 <%@ include file="../mainInc/mainTop.jsp" %>
 
 <!-- 
-	문의하기 폼 에서 이메일 Send 
+	문의하기 폼 에서 이메일 Send (완료)
  -->
 
 
@@ -443,17 +443,16 @@
 			<!-- 문의하기!! -->
 			
 			<div class="form">
-				<form action="forms/contact.php" method="post" role="form"
-					class="php-email-form">
+				<form action="<c:url value='/email/indexMail.do'/>" method="post" role="form" class="php-email-form">
 					<div class="form-row">
 						<div class="col-md-6 form-group">
-							<input type="text" name="name" class="form-control" id="name"
+							<input type="text" name="senderName" class="form-control" id="name"
 								placeholder="보내시는 분 성함" data-rule="minlen:3"
 								data-msg="이름을 입력해주세요!">
 							<div class="validate"></div>
 						</div>
 						<div class="col-md-6 form-group">
-							<input type="email" class="form-control" name="email" id="email"
+							<input type="email" class="form-control" name="senderMail" id="email"
 								placeholder="보내시는 분 이메일" data-rule="email"
 								data-msg="보내시는 분의 이메일을 적어주세요!">
 							<div class="validate"></div>

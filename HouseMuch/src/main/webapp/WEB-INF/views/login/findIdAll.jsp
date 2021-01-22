@@ -17,6 +17,11 @@
 .form-row{
 	display:block;
 }
+.subin-button {
+	color: #FFFFFF;
+    background-color: #7DB249;
+    border-color: #7DB249;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/app-assets/css/components.css">
 
@@ -30,43 +35,20 @@
 			
 			<div align="center" style="margin-bottom:50px;"><img src="<c:url value='/resources/common_img/findId.png'/>" alt="findId"></div>
 			
-			<div style="width:800px; float: left; margin-left: 300px; margin-bottom: 50px; ">
-				<h4>아이디가 기억이 나지 않으시나요?</h4>
-				<p>고객님의 정보와 일치하는 아이디 목록입니다.</p>
+			<div style="width:800px; float: left; margin-left: 300px; margin-bottom: 30px; ">
+				<h4>조회하신 결과, 회원님의 아이디를 보여드립니다.</h4>
 			</div>
 	         
-			<form>
-				<input type="hidden" id="chkCode">
-				
-				<div class="form col-lg-12 php-email-form " align="center">
-				
-					<div class="form-group form-row row" align="left" style="display: inline-block;">
-		        		<label for="name">이름</label> 
-		        		<input type="text" class="form-control" name="userName"  style="width:400px;">		 	
-					</div>
-					<br>
-					<div class="form-group form-row row " align="left" style="display: inline-block; margin-left:123px;">
-						<label for="email">이메일 주소</label> 
-						<input type="text" class="form-control" name="email" style="width:400px;">
-	            		<div class="validate"></div>			 	
-					</div>
-					<div class="form-group form-row row" style="display:inline">
-						<input type="button" class="btn get-started-btn row" value="인증번호 받기" >
-					</div>
-					<br>
-					<div class="form-group form-row row" align="left" style="display: inline-block;">
-	            		<input type="text" class="form-control" name="code" disabled="disabled" placeholder="인증번호 6자리 입력" style="width:400px;">
-	            		<div class="validate"></div>	
-					</div>
-					<br><br>
-					<div class="text-center ">
-						<button type="submit">다음</button>
-					</div>
 	
-				</div>     
-			</form>    
+			<div class="form col-lg-12 php-email-form " align="center">
+			
+				<h3><span> USERID </span></h3>
+				<br>
+				<input type="button" class="btn subin-button" onclick="location.href='<c:url value="/login/login.do"/>'" value="로그인 하러 가기">
+			</div>     
+			   
+ 			<br><br>
  			
- 			<div></div>
   			<div class="divider my-2">
             	<div class="divider-text">or</div>
             </div>

@@ -11,6 +11,7 @@ public class IndexController {
    
    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
+
    @RequestMapping(value = "/user/mydash/userDash.do", method = RequestMethod.GET)
    public void index() {
       logger.info("에러가 안나라 얍!!");
@@ -27,3 +28,4 @@ public class IndexController {
    }
    
 }
+

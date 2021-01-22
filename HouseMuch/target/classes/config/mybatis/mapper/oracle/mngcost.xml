@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="config.mybatis.mapper.oracle.mngcost">
+	<!-- 관리비 대분류 select 뿌리기 -->
+	<select id="selectMCtgList" resultType="MngcostMainCtgVO">
+		select * from MNGCOST_MAIN_CTG
+		order by MNGCOST_M_CTG_NO
+	</select>
+	
+	<!-- 관리비 대분류 번호에 따른 소분류 select 뿌리기 (ajax)-->
+	<select id="selectSCtgList" parameterType="int"
+			resultType="MngcostSubCtgVO">
+		select * from MNGCOST_SUB_CTG
+		where MNGCOST_M_CTG_NO=#{mngcostMCtgNo}
+		order by MNGCOST_S_CTG_NO
+	</select>
+	
+	<!-- 관리비 (납부 내역) 조회 -->
+	<select id="selectPayList" parameterType="string"
+			resultType="mngcostPaymentListVo">
+		select * from MNGCOST_PAYMENT_LIST
+		where household_code=#{householdCode}
+	</select>
+	
+	<select id="selectMngcostInfoByClaim" parameterType="inquiryInfoVo"
+			resultType="mngcostInfoVo">
+		select * from MNGCOST_INFO
+		where apt_no=#{aptNo}
+		and to_char(mngcost_usedate, 'yyyy-mm')
+            =to_char(add_months(#{mngcostClaimdate}, -1), 'yyyy-mm')
+        and mngcost_s_ctg_no=#{mngcostSCtgNo}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+

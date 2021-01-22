@@ -35,7 +35,7 @@
 			
 			<div align="center" style="margin-bottom:50px;"><img src="<c:url value='/resources/common_img/findPwd.png'/>" alt="findId"></div>
 			
-			<div style="width:800px; float: left; margin-left: 300px; margin-bottom: 50px; ">
+			<div style="width:800px; float: left; margin-left: 300px;  ">
 				<h4>비밀번호 재설정</h4>
 				<p>비밀번호를 변경해 주세요.<br>
 				다른 아이디나 사이트에서 사용한 적 없는 안전한 비밀번호로 변경해 주세요.</p>

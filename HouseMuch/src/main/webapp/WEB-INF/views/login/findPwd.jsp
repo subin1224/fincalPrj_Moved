@@ -71,6 +71,7 @@
 					</div>
 					<br><br>
 					<div class="text-center ">
+						<a href="<c:url value='/login/findResetPwd.do'/>"> 페이지 이동 TEST !!! 후에 지울거임  </a>
 						<button type="submit">다음</button>
 					</div>
 	
