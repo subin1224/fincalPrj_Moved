@@ -30,7 +30,15 @@
 		where apt_no=#{aptNo}
 		and to_char(mngcost_usedate, 'yyyy-mm')
             =to_char(add_months(#{mngcostClaimdate}, -1), 'yyyy-mm')
-        and mngcost_s_ctg_no=#{mngcostSCtgNo}
+        <if test="mngcostSCtgNo!=0">
+			and mngcost_s_ctg_no=#{mngcostSCtgNo}
+		</if>
+		<if test="mngcostSCtgNo==0">
+			and mngcost_s_ctg_no in (select mngcost_s_ctg_no
+               	from MNGCOST_SUB_CTG
+               	where mngcost_m_ctg_no=#{mngcostMCtgNo})
+		</if>
+        order by mngcost_no desc
 	</select>
 </mapper>
 
