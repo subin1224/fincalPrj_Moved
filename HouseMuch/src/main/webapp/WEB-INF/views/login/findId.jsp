@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../mainInc/mainTop.jsp"%>
+<%@ include file="../mainInc/nonTop.jsp" %>
 
 <style type="text/css">
 .next-btn {
