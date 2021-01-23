@@ -4,12 +4,10 @@
 
 <link href="${pageContext.request.contextPath}/resources/userBoard/css/boardStyle.css" rel="stylesheet">
 
+<!-- 건의게시판 상세보기 -->
 <section id="userBoard" class="userBoard">
 	<div class="container">
 		<br> <br> <br> <br>
-		<div class="section-title">
-			<h2>건의게시판 상세보기</h2>
-		</div>
 		<div class="center">
 			<div class="text-right">
 				<button type="submit" id="btEdit">수정</button>
