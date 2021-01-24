@@ -4,6 +4,7 @@
 
 <link href="${pageContext.request.contextPath}/resources/userBoard/css/boardStyle.css" rel="stylesheet">
 
+<!-- 입주민게시판 상세보기 -->
 <section id="userBoard" class="userBoard">
 	<div class="container">
 		<br> <br> <br> <br>

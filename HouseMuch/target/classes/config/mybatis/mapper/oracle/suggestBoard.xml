@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.mapper.suggestBoard">
+	<insert id="insertSuggestBoard" parameterType="suggestBoardVo">
+		<selectKey keyProperty="SuggBoardNo" resultType="int" order="BEFORE">
+			select SUGGEST_BOARD_SEQ.NEXTVAL from dual
+		</selectKey>
+		INSERT INTO SUGGEST_BOARD(SUGG_BOARD_NO,SUGG_CTG_NO, SUGG_TITLE, SUGG_CONTENT, MEMBER_NO, APT_NO)
+		VALUES(#{suggBoardNo},#{suggCtgNo},#{suggTitle},#{suggContent},#{memberNo},#{aptNo})
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+
+

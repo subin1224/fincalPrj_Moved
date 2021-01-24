@@ -115,3 +115,20 @@ div#divFile {
 .text-right{
 	padding: 10px;
 }
+
+.text-center button[type="submit"]{
+  background: #5c9f24;
+  border: 0;
+  padding: 10px 30px 12px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.text-center button[type="submit"]:hover{
+  background: #6ab82a;
+}
+
+.text-center {
+	padding: 5px;
+}
