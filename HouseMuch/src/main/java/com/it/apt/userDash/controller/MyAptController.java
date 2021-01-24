@@ -5,13 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.it.apt.userBoard.controller.UserBoardController;
-
 @Controller
 @RequestMapping("/userDash/myApt")
 public class MyAptController {
 	private static final Logger logger
-	=LoggerFactory.getLogger(UserBoardController.class);
+	=LoggerFactory.getLogger(MyAptController.class);
 	
 	
 }

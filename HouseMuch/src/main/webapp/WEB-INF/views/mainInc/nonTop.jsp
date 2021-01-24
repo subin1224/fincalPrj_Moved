@@ -48,7 +48,7 @@
     <div class="container d-flex align-items-center col-lg-10">
 
       <h1 class="logo mr-auto"><a href='<c:url value='/main/index.do'/>'> 
-		<img alt="하우스머치 로고" src='<c:url value="/resources/aptUser_images/housemuch_logo.png"/>'>
+      	<img alt="하우스머치 로고" src='${pageContext.request.contextPath}/resources/aptUser_images/housemuch_logo.png'>
 		</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.jsp" class="logo mr-auto"><img src="${pageContext.request.contextPath}/resources/user/assets/img/logo.png" alt="" class="img-fluid"></a>-->

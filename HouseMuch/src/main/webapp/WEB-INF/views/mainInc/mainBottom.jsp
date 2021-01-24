@@ -7,34 +7,26 @@
 		<div class="container">
 			<div class="row">
 
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-4">
 					<div class="footer-info">
 						<h3>HOUse MUCH?</h3>
-						<p>
+						<div>
 							서울특별시 강남구 테헤란로 124  <br>
-							4층 아이티윌<br>
-							<br> 
-							<strong>Phone:</strong>+82 02 6255 8061<br> 
-							<strong>Email:</strong>info@housemuch.com<br>
-							<strong>site:</strong>https://www.itwill.net<br>
-						</p>
+							4층 아이티윌
+						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-4 col-md-6 footer-links">
-					<h4>Useful Links</h4>
-					<ul>
-						<li><i class="bx bx-chevron-right"></i> <a href="<c:url value='/main/index.do'/>">Home</a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="<c:url value='/main/index.do#why-us'/>">소개 </a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="<c:url value='/main/index.do#contact'/>">문의</a></li>
-						<li><i class="bx bx-chevron-right"></i> <a href="<c:url value='/register/registerApt.do'/>">신청</a></li>
-					</ul>
+				
+				<div class="col-lg-4 col-md-4">
+					<strong>Phone:</strong>&nbsp; +82 02 6255 8061<br> 
+					<strong>Email:</strong>&nbsp;info@housemuch.com<br>
+					<strong>site:</strong>&nbsp;https://www.itwill.net<br>
 				</div>
 
-				<div class="col-lg-4 col-md-6 footer-links">
+				<div class="col-lg-4 col-md-4 footer-links">
 					<h4>Thanks to</h4>
-					<ul>
-						<li><i class="bx bx-chevron-right"></i> 이수빈</li>
+					<ul class="d-flex">
+						<li style="padding-top:9px;"><i class="bx bx-chevron-right"></i> 이수빈</li>
 						<li><i class="bx bx-chevron-right"></i> 권영조</li>
 						<li><i class="bx bx-chevron-right"></i> 김이나</li>
 						<li><i class="bx bx-chevron-right"></i> 김한희</li>
@@ -76,8 +68,15 @@
 <script src="${pageContext.request.contextPath}/resources/user/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
 <!-- Template Main JS File -->
-<script src="${pageContext.request.contextPath}/resources/user/assets/js/main.js"></script>
-
+<script type="text/javascript">
+	$(function(){
+		$('#header').hover(function(){
+			$('.sb-menu').addClass('d-flex');
+		},function(){
+			$('.sb-menu').removeClass('d-flex');
+		});
+	});
+</script>
 </body>
 
 </html>

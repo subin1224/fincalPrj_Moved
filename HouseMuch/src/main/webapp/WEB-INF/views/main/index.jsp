@@ -73,8 +73,8 @@
 	        <div class="carousel-inner" role="listbox">
 	
 	          <!-- Slide 1 -->
-	          <div class="carousel-item active" style="background: url(resources/assets/img/slide/aptMain1.jpg);">
-	          	<div class="carousel-background "><img src="<c:url value='/resources/user/assets/img/slide/aptMain1.jpg'/>" alt="aptMain1" width="100%"></div>
+	          <div class="carousel-item active" style="background: url(${pageContext.request.contextPath}/resources/assets/img/slide/aptMain1.jpg);">
+	          	<div class="carousel-background "><img src="${pageContext.request.contextPath}/resources/user/assets/img/slide/aptMain1.jpg" alt="aptMain1" width="100%"></div>
 	            <div class="carousel-container">
 	              <div class="carousel-content">
 	                <h2 class="animate__animated animate__fadeInDown">HOUSE MUCH?</h2>

@@ -45,5 +45,6 @@ public class SuggestBoardController {
 		//3
 		
 		//4
+		return "";
 	}
 }
