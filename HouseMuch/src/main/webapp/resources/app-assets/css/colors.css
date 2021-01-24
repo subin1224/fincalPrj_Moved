@@ -465,35 +465,35 @@ input:focus ~ .bg-light {
 }
 
 .text-primary.text-lighten-5 {
-  color : #DEDBFB !important;
+  color : #2FA599 !important;
 }
 
 .bg-primary.bg-lighten-5 {
-  background-color : #DEDBFB !important;
+  background-color : #2FA599 !important;
 }
 
 .border-primary.border-lighten-5 {
-  border : 1px solid #DEDBFB !important;
+  border : 1px solid #2FA599 !important;
 }
 
 .border-top-primary.border-top-lighten-5 {
-  border-top : 1px solid #DEDBFB !important;
+  border-top : 1px solid #2FA599 !important;
 }
 
 .border-bottom-primary.border-bottom-lighten-5 {
-  border-bottom : 1px solid #DEDBFB !important;
+  border-bottom : 1px solid #2FA599 !important;
 }
 
 .border-left-primary.border-left-lighten-5 {
-  border-left : 1px solid #DEDBFB !important;
+  border-left : 1px solid #2FA599 !important;
 }
 
 .border-right-primary.border-right-lighten-5 {
-  border-right : 1px solid #DEDBFB !important;
+  border-right : 1px solid #2FA599 !important;
 }
 
 .overlay-primary.overlay-lighten-5 {
-  background : #DEDBFB;
+  background : #2FA599;
   /* The Fallback */
   background : rgba(222, 219, 251, 0.6);
 }

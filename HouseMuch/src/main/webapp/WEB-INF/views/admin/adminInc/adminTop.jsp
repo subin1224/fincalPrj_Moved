@@ -111,7 +111,8 @@
     <!-- END: Custom CSS-->
 
 	<!-- 비교 -->
-
+<!-- 0123 제이쿼리  top에 안들어있어서 김이나 추가 절대 지우지 말것 -->
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.5.1.min.js"></script>
 
 
 
