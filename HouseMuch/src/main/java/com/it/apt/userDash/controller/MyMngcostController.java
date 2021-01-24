@@ -11,14 +11,9 @@ public class MyMngcostController {
    private static final Logger logger
    =LoggerFactory.getLogger(MyMngcostController.class);
    
-   @RequestMapping("/mngcostItemCheck.do")
-   public void mngcostItemCheck() {
-      logger.info("입주민 대시보드 관리비 항목별 화면 보여주기 - mngcostItemCheck");
-   }
-   
-   @RequestMapping("/mngcostMonthlyCheck.do")
-   public void mngcostMonthlyCheck() {
-	   logger.info("입주민 대시보드 관리비 항목별 화면 보여주기 - mngcostMonthlyCheck");
+   @RequestMapping("/mngcostCheck.do")
+   public void mngcostCheck() {
+      logger.info("입주민 대시보드 관리비 화면 보여주기 - mngcostCheck");
    }
    
    

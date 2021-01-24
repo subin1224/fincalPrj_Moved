@@ -436,20 +436,11 @@
 					href="#"><i data-feather='menu'></i><span class="menu-title text-truncate"
 						data-i18n="eCommerce">관리비 조회</span></a>
 					<ul class="menu-content">
-						<!-- 관리비 항목별 조회 -->
+						<!-- 관리비 조회 -->
 						<li><a class="d-flex align-items-center"
-							href="<c:url value='/userDash/myMngcost/mngcostItemCheck.do'/>">
+							href="<c:url value='/userDash/myMngcost/mngcostCheck.do'/>">
 								<i data-feather="circle"></i><span class="menu-item"
-								data-i18n="Shop">관리비 항목별 조회</span>
-						</a></li>
-
-					</ul>
-					<ul class="menu-content">
-						<!-- 관리비 월별 조회 -->
-						<li><a class="d-flex align-items-center"
-							href="<c:url value='/userDash/myMngcost/mngcostMonthlyCheck.do'/>">
-								<i data-feather="circle"></i><span class="menu-item"
-								data-i18n="Shop">관리비 월별 조회</span>
+								data-i18n="Shop">관리비 조회</span>
 						</a></li>
 
 					</ul>

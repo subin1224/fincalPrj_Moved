@@ -40,11 +40,6 @@ div#divList {
 			<!------- 타이틀 ------->
 			<div class="col-sm-12" id="dash-title">
 				<h2 class="content-header-title float-left mb-0">마이페이지</h2>
-				<div class="breadcrumb-wrapper">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item active">관리비 납부 내역</li>
-					</ol>
-				</div>
 			</div>
 			<!------- 입주민 ------->
 			<div class="col-sm-12">
@@ -62,10 +57,7 @@ div#divList {
 						</div>
 						<div class="text-center">
 							<h1 class="mb-1 text-white">반갑습니다. 입주민님!</h1>
-							<p class="card-text m-auto w-75">
-								You have done <strong>57.6%</strong> more sales today. Check
-								your new badge in your profile.
-							</p>
+							<p class="card-text m-auto w-75">여기다 어떤 걸 넣으면 좋을까</p>
 						</div>
 					</div>
 				</div>
@@ -74,15 +66,20 @@ div#divList {
 		<!------------ 두번째div ------------>
 		<div class="row">
 			<!-------  ------->
-			<div class="col-sm-3">
-				<div class="row">
-					<div class="col-12">ㅇㅇㅇ</div>
-				</div>
-				<div class="row">
-					<div class="col-12">ㅇㅇㅇ</div>
+			<div class="col-sm-7">
+				<div class="card">
+					완납/미납
 				</div>
 			</div>
 			<div class="col-sm-5">
+				<div class="card">
+					오늘은 2021년 1월 24일 일요일입니다.
+				</div>
+			</div>
+		</div>
+		<!------------ 세번째div ------------>
+		<div class="row">
+			<div class="col-sm-6">
 				<div class="card">
 					<div class="section-title">
 						<h2>이번 달 관리비</h2>
@@ -113,71 +110,45 @@ div#divList {
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4"></div>
+			<div class="col-sm-6">
+				<section id="chartjs-chart">
+					<div class="card">
+						<div
+							class="card-header d-flex justify-content-between align-items-sm-center align-items-start flex-sm-row flex-column">
+							<div class="header-left">
+								<h4 class="card-title">Latest Statistics</h4>
+							</div>
+							<div class="header-right d-flex align-items-center mt-sm-0 mt-1">
+								<i data-feather="calendar"></i> <input type="text"
+									class="form-control flat-picker border-0 shadow-none bg-transparent pr-0"
+									placeholder="YYYY-MM-DD" />
+							</div>
+						</div>
+						<div class="card-body">
+							<canvas class="bar-chart-ex chartjs" data-height="400"></canvas>
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
-		<!------------ 세번째div ------------>
+		<!------------ 네번째div ------------>
 		<div class="row">
 			<!------- 내 건의사항 ------->
 			<div class="col-sm-4">
 				<div class="card" id="divList">
 					<h6 class="section-label">내 건의사항</h6>
 					<div class="mt-1">
-						<div class="d-flex justify-content-start align-items-center mb-75">
-							<a href="javascript:void(0);" class="mr-75">
-								<div class="avatar bg-light-primary rounded">
-									<div class="avatar-content">
-										<i data-feather="watch" class="avatar-icon font-medium-1"></i>
-									</div>
-								</div>
-							</a> <a href="javascript:void(0);">
-								<div class="blog-category-title text-body">Fashion</div>
-							</a>
+						<!-- 테이블 시작 -->
+						<!-- 내역 없을 때 -->
+						<div>
+							<table>
+								<tr>
+									<td colspan="5">내역이 존재하지 않습니다.</td>
+								</tr>
+							</table>
 						</div>
-						<div class="d-flex justify-content-start align-items-center mb-75">
-							<a href="javascript:void(0);" class="mr-75">
-								<div class="avatar bg-light-success rounded">
-									<div class="avatar-content">
-										<i data-feather="shopping-cart"
-											class="avatar-icon font-medium-1"></i>
-									</div>
-								</div>
-							</a> <a href="javascript:void(0);">
-								<div class="blog-category-title text-body">Food</div>
-							</a>
-						</div>
-						<div class="d-flex justify-content-start align-items-center mb-75">
-							<a href="javascript:void(0);" class="mr-75">
-								<div class="avatar bg-light-danger rounded">
-									<div class="avatar-content">
-										<i data-feather="command" class="avatar-icon font-medium-1"></i>
-									</div>
-								</div>
-							</a> <a href="javascript:void(0);">
-								<div class="blog-category-title text-body">Gaming</div>
-							</a>
-						</div>
-						<div class="d-flex justify-content-start align-items-center mb-75">
-							<a href="javascript:void(0);" class="mr-75">
-								<div class="avatar bg-light-info rounded">
-									<div class="avatar-content">
-										<i data-feather="hash" class="avatar-icon font-medium-1"></i>
-									</div>
-								</div>
-							</a> <a href="javascript:void(0);">
-								<div class="blog-category-title text-body">Quote</div>
-							</a>
-						</div>
-						<div class="d-flex justify-content-start align-items-center">
-							<a href="javascript:void(0);" class="mr-75">
-								<div class="avatar bg-light-warning rounded">
-									<div class="avatar-content">
-										<i data-feather="video" class="avatar-icon font-medium-1"></i>
-									</div>
-								</div>
-							</a> <a href="javascript:void(0);">
-								<div class="blog-category-title text-body">Video</div>
-							</a>
-						</div>
+						<!-- 내역 있을 때 -->
+						<!--- 테이블 끝 --->
 					</div>
 				</div>
 			</div>
@@ -187,6 +158,7 @@ div#divList {
 					<h6 class="section-label">내 부가시설</h6>
 					<div class="mt-1">
 						<!-- 테이블 시작 -->
+						<!-- 내역 없을 때 -->
 						<div>
 							<table>
 								<tr>
@@ -194,6 +166,7 @@ div#divList {
 								</tr>
 							</table>
 						</div>
+						<!-- 내역 있을 때 -->
 						<!--- 테이블 끝 --->
 					</div>
 				</div>
@@ -204,6 +177,7 @@ div#divList {
 					<h6 class="section-label">내 차량내역</h6>
 					<div class="mt-1">
 						<!-- 테이블 시작 -->
+						<!-- 내역 없을 때 -->
 						<div>
 							<table>
 								<tr>
@@ -211,6 +185,7 @@ div#divList {
 								</tr>
 							</table>
 						</div>
+						<!-- 내역 있을 때 -->
 						<!--- 테이블 끝 --->
 					</div>
 				</div>
