@@ -8,4 +8,7 @@ public interface MngcostDAO {
 	List<MngcostSubCtgVO> selectSCtgList(int mngcostMCtgNo);
 	List<MngcostPaymentListVO> selectPayList(String householdCode);
 	List<MngcostInfoVO> selectMngcostInfoByClaim(InquiryInfoVO inqVo);
+	
+	//관리자
+	List<MngcostInfoVO> adminSelectMngcostInfo(InquiryInfoVO inqVo);
 }
