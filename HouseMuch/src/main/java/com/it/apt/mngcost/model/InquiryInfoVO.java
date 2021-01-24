@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 public class InquiryInfoVO {
 	private int aptNo;
     private Timestamp mngcostClaimdate;
+    private Timestamp currentdate;
     private int mngcostSCtgNo;
     private int mngcostMCtgNo;
     
@@ -19,6 +20,12 @@ public class InquiryInfoVO {
 	}
 	public void setMngcostClaimdate(Timestamp mngcostClaimdate) {
 		this.mngcostClaimdate = mngcostClaimdate;
+	}
+	public Timestamp getCurrentdate() {
+		return currentdate;
+	}
+	public void setCurrentdate(Timestamp currentdate) {
+		this.currentdate = currentdate;
 	}
 	public int getMngcostSCtgNo() {
 		return mngcostSCtgNo;
@@ -35,7 +42,7 @@ public class InquiryInfoVO {
 	
 	@Override
 	public String toString() {
-		return "InquiryInfoVO [aptNo=" + aptNo + ", mngcostClaimdate=" + mngcostClaimdate + ", mngcostSCtgNo="
-				+ mngcostSCtgNo + ", mngcostMCtgNo=" + mngcostMCtgNo + "]";
+		return "InquiryInfoVO [aptNo=" + aptNo + ", mngcostClaimdate=" + mngcostClaimdate + ", currentdate="
+				+ currentdate + ", mngcostSCtgNo=" + mngcostSCtgNo + ", mngcostMCtgNo=" + mngcostMCtgNo + "]";
 	}
 }

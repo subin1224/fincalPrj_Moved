@@ -12,6 +12,7 @@ public class MngcostDAOMybatis implements MngcostDAO{
 	@Autowired private SqlSessionTemplate sqlSession;
 	private String namespace="config.mybatis.mapper.oracle.mngcost.";
 	
+	//입주자
 	@Override
 	public List<MngcostMainCtgVO> selectMCtgList() {
 		return sqlSession.selectList(namespace+"selectMCtgList");
@@ -30,5 +31,12 @@ public class MngcostDAOMybatis implements MngcostDAO{
 	@Override
 	public List<MngcostInfoVO> selectMngcostInfoByClaim(InquiryInfoVO inqVo) {
 		return sqlSession.selectList(namespace+"selectMngcostInfoByClaim", inqVo);
+	}
+
+	
+	//관리자
+	@Override
+	public List<MngcostInfoVO> adminSelectMngcostInfo(InquiryInfoVO inqVo) {
+		return sqlSession.selectList(namespace+"adminSelectMngcostInfo", inqVo);
 	}
 }
