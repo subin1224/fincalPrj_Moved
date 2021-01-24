@@ -34,5 +34,4 @@ public class SuggestBoardController {
 		logger.info("건의 게시판 글 상세보기 - suggestBoardDetail");
 	}
 
-
 }

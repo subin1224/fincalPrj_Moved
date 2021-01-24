@@ -32,6 +32,19 @@
 
   <!-- Template Main CSS File -->
   <link href="${pageContext.request.contextPath}/resources/user/assets/css/style.css" rel="stylesheet">
+  
+  <style type="text/css">
+  	.sb-menu{
+	  	top: 0;
+	    display: block;
+	    height: 250px;
+	    opacity: 1;
+  	}
+  	.nav-menu a{
+  		font-size:20px; !important
+  	}
+  </style>
+
 
   <!-- =======================================================
   * Template Name: Groovin - v2.2.0
@@ -47,35 +60,90 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center col-lg-10">
 
-      <h1 class="logo mr-auto"><a href='<c:url value='/main/index.do'/>'> 
-      <img alt="하우스머치 로고" src='<c:url value="/resources/aptUser_images/housemuch_logo.png"/>'>
+      <h1 class="logo mr-5"><a href='<c:url value='/main/main.do'/>'> 
+      <img alt="하우스머치 로고" src='${pageContext.request.contextPath}/resources/aptUser_images/housemuch_logo.png'>
       </a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.jsp" class="logo mr-auto"><img src="${pageContext.request.contextPath}/resources/user/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <div class="nav-menu d-none d-lg-block">
-        <ul>
-          <li><a href="<c:url value='/mngcost/mngcostInquiry.do'/>">관리비 조회</a></li>
-          <li><a href="<c:url value='#'/>">에너지 조회</a></li>
-          <li><a href="<c:url value='#'/>">생활지원 센터</a></li>
-          <li><a href="<c:url value='#'/>">커뮤니티</a></li>
-          <li><a href="<c:url value='#'/>">관리비 납부</a></li>
-          <li><a href="<c:url value='#'/>">chat</a></li>
-          <li class="drop-down"><a href="">user1</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+      <div class="nav-menu d-none d-lg-block" style="width:100%">
+      
+       <ul id="menu123" style="display: inline-flex;" class="m-auto">
+         <li>
+         	<a href="<c:url value='/mngcost/mngcostInquiry.do'/>">관리비 조회</a>
+         </li>
+         <li><a href="<c:url value='#'/>">에너지 조회</a></li>
+         <li><a href="<c:url value='#'/>">생활지원 센터</a></li>
+         <li><a href="<c:url value='#'/>">입주민 커뮤니티</a></li>
+         <li><a href="<c:url value='#'/>">관리비 납부</a></li>
+       </ul>
+      
+      <ul style="float: right">  
+          <li class="nav-item d-none d-lg-block">
+          	<a href="#">
+         		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          	</a>
+          </li>
+          <li class="drop-down" style="padding-top:0;">
+          <a href="#" >
+         	<img class="round" src="${pageContext.request.contextPath}/resources/user_images/${memVo.memberImgFilename }" alt="avatar" height="40" width="40" style="background-color: #fff; padding-top:0px; border-radius : 50%; overflow: hidden;">
+          </a>
+            <ul style="text-align: left; width:150px;">
+              <li><a href="#">마이 페이지</a></li>
+              <li><a href="#">1:1 채팅</a></li>
+              <li><a href="<c:url value='/login/logout.do'/>">로그아웃</a></li>
             </ul>
           </li>
           
           
         </ul>
+ 
       </div><!-- .nav-menu -->
 
-
     </div>
+    
+	<div class="sb-menu container align-items-center col-lg-10 " style="width:100%; height:22vh; display: none;">
+	      <h1 class="logo mr-5" style="visibility: hidden;"><a href='<c:url value='/main/main.do'/>'> 
+		      <img alt="하우스머치 로고" src='${pageContext.request.contextPath}/resources/aptUser_images/housemuch_logo.png'>
+		  </a></h1>
+		<div class="nav-menu " style="width:100%">  
+			<ul style="display: inline-flex;">
+				<li>
+			       	<ul >
+			     		<li><a href="#">관리비 조회</a></li>
+			     	</ul>
+			     </li>
+			     <li>
+			     	<ul style="display: block">
+			     		<li><a href="#">공과금 기록</a>
+			     		<li><a href="#">공과금 조회</a>
+			     	</ul>
+		     	</li>
+			     <li class="ml-2 mr-3">
+			     	<ul style="display: block">
+			     		<li><a href="#">공지사항</a>
+			     		<li><a href="#">아파트 일정</a>
+			     		<li><a href="#">부가시설</a>
+			     		<li><a href="#">차량관리</a>
+			     		<li><a href="#">건의 게시판</a>
+			     	</ul>
+		     	</li>
+			     <li class="mr-3">
+			     	<ul style="display: block">
+			     		<li><a href="#">입주민 게시판</a>
+			     		<li><a href="#">입주민 투표</a>
+			     	</ul>
+		     	</li>
+			     <li>
+			     	<ul style="display: block">
+			     		<li><a href="#">납부하기</a>
+			     		<li><a href="#">납부내역 조회</a>
+			     	</ul>
+		     	</li>
+	     	</ul>
+		</div>    
+	</div>
+	
   </header><!-- End Header -->
 
  

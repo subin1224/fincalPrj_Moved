@@ -74,7 +74,7 @@ public class LoginController {
    }
    
    @RequestMapping("/logout.do")
-   public String logout(HttpSession session) {
+   public String logout(HttpSession session, Model model) {
 	   String id=(String)session.getAttribute("id");
 	   
 	   logger.info("로그아웃 처리, 파라미터 id={}", id);
@@ -82,7 +82,10 @@ public class LoginController {
 	   session.removeAttribute("id");
 	   session.removeAttribute("aptNo");
 	   
-	   return "redirect:/main/index.do";
+	   model.addAttribute("msg", "로그아웃 되었습니다");
+	   model.addAttribute("url", "/main/index.do");
+		
+	   return "common/message";
    }
    
    

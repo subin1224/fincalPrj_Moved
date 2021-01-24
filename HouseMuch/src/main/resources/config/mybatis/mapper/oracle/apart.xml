@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="config.mybatis.mapper.oracle.apart">	
+
+	<select id="selectAptNameById" parameterType="string" resultType="string">
+		select apt_name from apartment_info 
+		where apt_no=(select h.apt_no from household_info h join member_info m on h.household_code=m.household_code where id=#{id})
+	</select>
+
+</mapper>
+
+
+
