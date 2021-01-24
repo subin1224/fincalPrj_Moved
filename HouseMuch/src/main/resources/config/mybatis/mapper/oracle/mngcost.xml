@@ -3,6 +3,7 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="config.mybatis.mapper.oracle.mngcost">
+<!-- 입주자 -->
 	<!-- 관리비 대분류 select 뿌리기 -->
 	<select id="selectMCtgList" resultType="MngcostMainCtgVO">
 		select * from MNGCOST_MAIN_CTG
@@ -33,7 +34,26 @@
         <if test="mngcostSCtgNo!=0">
 			and mngcost_s_ctg_no=#{mngcostSCtgNo}
 		</if>
-		<if test="mngcostSCtgNo==0">
+		<if test="mngcostMCtgNo!=0 and mngcostSCtgNo==0">
+			and mngcost_s_ctg_no in (select mngcost_s_ctg_no
+               	from MNGCOST_SUB_CTG
+               	where mngcost_m_ctg_no=#{mngcostMCtgNo})
+		</if>
+        order by mngcost_no desc
+	</select>
+	
+	
+<!-- 관리자 -->
+	<select id="adminSelectMngcostInfo" parameterType="inquiryInfoVo"
+			resultType="mngcostInfoVo">
+		select * from MNGCOST_INFO
+		where apt_no=#{aptNo}
+		and to_char(mngcost_usedate, 'yyyy-mm')
+            =to_char(#{currentdate}, 'yyyy-mm')
+        <if test="mngcostSCtgNo!=0">
+			and mngcost_s_ctg_no=#{mngcostSCtgNo}
+		</if>
+		<if test="mngcostMCtgNo!=0 and mngcostSCtgNo==0">
 			and mngcost_s_ctg_no in (select mngcost_s_ctg_no
                	from MNGCOST_SUB_CTG
                	where mngcost_m_ctg_no=#{mngcostMCtgNo})
@@ -41,12 +61,3 @@
         order by mngcost_no desc
 	</select>
 </mapper>
-
-
-
-
-
-
-
-
-

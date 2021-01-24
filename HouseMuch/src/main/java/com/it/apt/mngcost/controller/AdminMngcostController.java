@@ -1,6 +1,7 @@
 package com.it.apt.mngcost.controller;
 
-
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -12,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.it.apt.member.model.MemberService;
@@ -20,21 +20,22 @@ import com.it.apt.member.model.MemberVO;
 import com.it.apt.mngcost.model.InquiryInfoVO;
 import com.it.apt.mngcost.model.MngcostInfoVO;
 import com.it.apt.mngcost.model.MngcostMainCtgVO;
-import com.it.apt.mngcost.model.MngcostPaymentListVO;
 import com.it.apt.mngcost.model.MngcostService;
-import com.it.apt.mngcost.model.MngcostSubCtgVO;
 
 @Controller
-@RequestMapping("/mngcost")
-public class MngcostController {
+@RequestMapping("/admin/adminMngcost")
+public class AdminMngcostController {
 	private static final Logger logger
 		=LoggerFactory.getLogger(MngcostController.class);
 	
-	@Autowired private MngcostService mngcostService;
-	@Autowired private MemberService memberService;
+	@Autowired MngcostService mngcostService;
+	@Autowired MemberService memberService;
 	
-	@RequestMapping("/mngcostInquiry.do")
-	public String mngcostInquiry(HttpSession session, Model model) {
+	@RequestMapping("/adminMngcostRegister.do")
+	public String adminMngcostInquiry(@ModelAttribute InquiryInfoVO inqVo,
+			HttpSession session, Model model) {
+		logger.info("관리자용 관리비 등록 화면, 파라미터 inqVo={}", inqVo);
+		
 		MemberVO memVo=(MemberVO)session.getAttribute("memVo");
 		if(memVo==null) {
 			model.addAttribute("msg", "로그인이 필요합니다.");
@@ -42,34 +43,22 @@ public class MngcostController {
 			
 			return "common/message";
 		}//인터셉트
-		logger.info("관리비조회 페이지");
+		inqVo.setAptNo(memberService.selectAptNo(memVo.getId()));
+		Timestamp currDate=new Timestamp(new Date().getTime());
+		inqVo.setCurrentdate(currDate);
 		
 		List<MngcostMainCtgVO> mngcostMainCtgList
 			=mngcostService.selectMCtgList();
 		logger.info("관리비 대분류 조회 결과 mngcostMainCtgList={}",
 										mngcostMainCtgList);
 		
-		List<MngcostPaymentListVO> mngcostPayList
-			=mngcostService.selectPayList("aa"); //세션 세대코드로 변경해야함
-		logger.info("관리비 납부내역 조회 결과 mngcostPayList={}",
-										mngcostPayList);
+		List<MngcostInfoVO> mngcostInfoList
+			=mngcostService.adminSelectMngcostInfo(inqVo);
+		
 		model.addAttribute("mngcostMainCtgList", mngcostMainCtgList);
-		model.addAttribute("mngcostPayList", mngcostPayList);
+		model.addAttribute("mngcostInfoList", mngcostInfoList);
 		
-		return "mngcost/mngcostInquiry";
-	}
-	
-	@ResponseBody
-	@RequestMapping("/showSubCtg.do") //관리자도 공유
-	public List<MngcostSubCtgVO> showSubCtg
-			(@RequestParam(defaultValue = "0") int mngcostMCtgNo) {
-		logger.info("관리비 소분류 리스트 보여주기, 파라미터 mngcostMCtgNo={}", mngcostMCtgNo);
-		
-		List<MngcostSubCtgVO> mngcostSubCtgList
-			=mngcostService.selectSCtgList(mngcostMCtgNo);
-		logger.info("관리비 소분류 조회 결과 mngcostSubCtgList={}", mngcostSubCtgList);
-		
-		return mngcostSubCtgList;
+		return "admin/adminMngcost/adminMngcostRegister";
 	}
 	
 	@ResponseBody
@@ -77,19 +66,14 @@ public class MngcostController {
 	public List<MngcostInfoVO> showDetail(@ModelAttribute InquiryInfoVO inqVo,
 			 HttpSession session) {
 		MemberVO memVo=(MemberVO)session.getAttribute("memVo");
-		logger.info("관리비 상세보기, inqVo={}", inqVo);
+		logger.info("관리자용 관리비 상세보기, inqVo={}", inqVo);
 		
 		inqVo.setAptNo(memberService.selectAptNo(memVo.getId()));
 		
 		List<MngcostInfoVO> mngcostInfoList
-			=mngcostService.selectMngcostInfoByClaim(inqVo);
+			=mngcostService.adminSelectMngcostInfo(inqVo);
 		logger.info("관리비 상세보기 조회 결과 mngcostInfoList={}", mngcostInfoList);
 		
 		return mngcostInfoList;
-	}
-	
-	@RequestMapping("/mngcostPayment.do")
-	public void mngcostPayment(@RequestParam(defaultValue = "0")int mngcostListNo) {
-		logger.info("관리비 납부화면, 파라미터 mngcostListNo={}", mngcostListNo);
 	}
 }
