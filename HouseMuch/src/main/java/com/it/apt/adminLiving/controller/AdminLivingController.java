@@ -52,25 +52,7 @@ public class AdminLivingController {
 	//****************************** 행정관리자 차량관리 끝*************************************//
 	
 	
-	//****************************** 행정관리자 일정 및 공지 등록 시작 *************************************//
-	@RequestMapping("/adminNoti/adminNotiRegister.do")
-	public void adminNotice() {
-		logger.info("adminNotiRegister 화면보여주기");
-	}
 
-	@RequestMapping("/adminNoti/adminNotiEdit.do")
-	public void adminNotiEdit() {
-		logger.info("adminNotiEdit 공지 수정 화면보여주기");
-	}
-
-	@RequestMapping("/adminNoti/adminNotiList.do")
-	public void adminNotiList() {
-		logger.info("adminNotiList 공지 수정 화면보여주기");
-	}
-	//****************************** 행정관리자 일정 및 공지 등록 끝 *************************************//
-	
-	
-	
 	
 	
 	

@@ -906,12 +906,12 @@ body.dark-layout {
 }
 
 .dark-layout .table thead.thead-dark th, .dark-layout .table tfoot.thead-dark th {
-  background-color : #FFFFFF;
-  color : #4B4B4B !important;
+  background-color : #0E515F;
+  color : #FFFFFF !important;
 }
 
 .dark-layout .table:not(.table-dark):not(.table-light) thead:not(.thead-dark) th, .dark-layout .table:not(.table-dark):not(.table-light) tfoot:not(.thead-dark) th {
-  background : #343D55;
+  background : #0E515F;
 }
 
 .dark-layout .table.table-dark {
